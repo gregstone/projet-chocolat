@@ -1,0 +1,25 @@
+/* FOOTER */ 
+
+footer{
+	background-color: rgb(45, 45, 45);
+	color: white;
+}
+
+
+.iconReseauxFooter img{
+	height: 50px;
+	width: 50px;
+}
+
+
+.listeFooter{
+	list-style-type: none;
+}
+
+.listeFooter a {
+	color: white; 
+}
+
+.basFooter{
+	background-color: rgb(25, 25, 25);
+}
