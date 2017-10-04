@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+
+<!--Internet explorer conditions-->
+
+
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1 ">
+
+<!--À approfondir-->
+  <meta name="author" content="name">
+  <meta name="description" content="texte explicatif 150 caractères max">
+  <meta name="keywords" content="keywords,here">
+
+
+<!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<!--Google fonts-->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+<!--Meta property et name pour réseaux sociaux-->
+
+<!-- Google console? -->
+<!-- URL canonique? -->
+
+  <title>Chocolat en joie</title>
+  </head>
+  <body>
+
+
+<header></header>
+
+
+<!-- Section FORMULAIRE -->
+
+<!--
+sujet
+(recettes, origines produit, horaires, prix)
+
+Nom
+Prenom
+Email
+adresse
+n tel
+
+champ message
+bouton envoi
+-->
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nom</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Prenom</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Adresse</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Numéro tel</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+
+
+
+  <div class="form-group">
+    <label for="exampleSelect1">Sujet</label>
+    <select class="form-control" id="exampleSelect1">
+      <option></option>
+      <option>Inscription atelier</option>
+      <option>Démarche eco-responsable</option>
+      <option>Recettes</option>
+      <option>Prix</option>
+      <option>Horaires</option>
+      <option>Autre</option>
+
+    </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleTextarea">Votre message</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+<!--
+
+<div class="container animated fadeIn">
+
+  <div class="row">
+    <h1 class="header-title"> Contact </h1>
+    <hr>
+    <div class="col-sm-12" id="parent">
+    	<div class="col-sm-6">
+    	<iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaY32Qm3KWTkRuOnKfoIVZws&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY" allowfullscreen></iframe>
+    	</div>
+
+    	<div class="col-sm-6">
+    		<form action="form.php" class="contact-form" method="post">
+
+		        <div class="form-group">
+		          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+		        </div>
+
+
+		        <div class="form-group form_left">
+		          <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
+		        </div>
+
+		      <div class="form-group">
+		           <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+		      </div>
+		      <div class="form-group">
+		      <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+		      <br>
+	      	  <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
+		      </div>
+     		</form>
+    	</div>
+    </div>
+  </div>
+
+  <div class="container second-portion">
+	<div class="row">
+         Boxes de Acoes
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">MAIL & WEBSITE</h3>
+						<p>
+							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp gondhiyahardik6610@gmail.com
+							<br>
+							<br>
+							<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.hardikgondhiya.com
+						</p>
+
+					</div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">CONTACT</h3>
+    					<p>
+							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-9624XXXXX
+							<br>
+							<br>
+							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-7567065254
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">
+				<div class="icon">
+					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">ADDRESS</h3>
+    					<p>
+							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot
+							 "Shree Krishna Krupa", Rajkot - 360001.
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer></footer>
+
+
+
+
+
+
+
+<!--Google analytic-->
+    <script type="text/javascript">
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
+     _gaq.push(['_trackPageview']);
+     (function()
+     {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>
