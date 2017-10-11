@@ -257,7 +257,13 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-
+	<script src="js/bootstrap.min.js"></script>
+<!-- Utilisation des coockies -->
+	<script src="js/cookiechoices.js"></script>
+	<script>document.addEventListener ('DOMContentLoaded', function(event) {
+		cookieChoices.showCookieConsentBar ('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l\’utilisation des cookies.', 'J\’accepte', 'En savoir plus', 'http://www.votre-site.com/page-mentions-legales/');
+		});
+	</script>
+	
 	</body>
 </html>
