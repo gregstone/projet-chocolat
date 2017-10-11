@@ -120,7 +120,7 @@ a {
 		}
 	Contact end */
 
-/* FOOTER */
+/*------- FOOTER -------*/
 
 footer{
 	background-color: rgb(45, 45, 45);
@@ -145,3 +145,27 @@ footer{
 .basFooter{
 	background-color: rgb(25, 25, 25);
 }
+
+
+
+
+
+
+/*------- PAGE PRODUITS -------*/
+
+.background-image{
+    background-image: url('http://via.placeholder.com/1500x600');
+}
+
+.ficheProduit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*------- FIN PAGES PRODUITS -------*/
