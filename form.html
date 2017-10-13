@@ -8,116 +8,174 @@
 <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
 <!--[if IE 8]><html class="preIE9"><![endif]-->
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
-  <head>
-    <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1 ">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1 ">
 
-<!--À approfondir-->
-  <meta name="author" content="name">
-  <meta name="description" content="texte explicatif 150 caractères max">
-  <meta name="keywords" content="keywords,here">
+		<!--À approfondir-->
+		<meta name="author" content="name">
+		<meta name="description" content="texte explicatif 150 caractères max">
+		<meta name="keywords" content="keywords,here">
 
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--Favicon-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<!--Google fonts-->
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+		<!--Fichier CSS-->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
 
-<!--Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!--Favicon-->
-  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-<!--Google fonts-->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+		<!--Meta property et name pour réseaux sociaux-->
+		<!-- Google console? -->
+		<!-- URL canonique? -->
 
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+		<title>Chocolat en joie</title>
+	</head>
 
-<!--Meta property et name pour réseaux sociaux-->
+	<body>
 
-<!-- Google console? -->
-<!-- URL canonique? -->
+	<header> <!-- BARRE DE NAVIGATION -->		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-3">
+					<a href="index.html"><img src="image/logo_chocolat1.svg" alt="Logo barre de chocolat" width="25%"><h1>Chocolat en Joie</h1></a>
+				</div>
+				<div class="col-xs-9 text-center list-inline">
+					<nav>
+						<ul class="nav navbar-nav pull-right">
+							<li><a href="index.html" class="active">Accueil</a></li>
+							<li><a href="#produits">Nos produits</a></li>
+							<li><a href="#localisation">Nous Trouver</a></li>
+							<li><a href="form.html">Nous Contacter</a></li>
+							<li><a href="#">Nos Recettes</a></li>
+							<div class="col-xs-2 list-inline pull-right">
+								<a href="#"><img src="image/i_facebook.svg" alt="Icon Facebook" width="20%"/></a>
+								<a href="#"><img src="image/i_pinterest.svg" alt="Icon Pinterest" width="20%"/></a>
+								<a href="#"><img src="image/i_instagram.svg" alt="Icon Instagram" width="20%"/></a>
+							</div>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	</header>
 
-  <title>Chocolat en joie</title>
-  </head>
-  <body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<a href="https://placeholder.com"><img src="http://via.placeholder.com/1000x400" alt="" class="img-responsive"></a>
+			</div>
+                
+      <div class="col-lg-8 col-lg-offset-2">
+      	<h1>NOUS CONTACTER</h1>
 
+      	<form id="contact-form" method="post" action="" role="form">
+      		<div class="controls">
+      			<div class="row">
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_name">Votre prénom *</label>
+      						<input id="form_name" type="text" name="name" class="form-control" placeholder="prénom" required="required" >
+      						<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais vos données avec un tiers.</small>
+      					</div>
+      				</div>
 
-<header></header>
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_lastname">Votre nom *</label>
+      						<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="nom" required="required" >
+      						<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais vos données avec un tiers.</small>
+      					</div>
+      				</div>
+      			</div>
 
+      			<div class="row">
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_email">Votre email *</label>
+      						<input id="form_email" type="email" name="email" class="form-control" placeholder="email" required="required" >
+      						<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais vos données avec un tiers.</small>
+      					</div>
+      				</div>
 
-<!-- Section FORMULAIRE -->
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_phone">Votre téléphone</label>
+      						<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="numéro de téléphone">
+      						<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais vos données avec un tiers.</small>
+      					</div>
+      				</div>
+      			</div>
 
-<!--
-sujet
-(recettes, origines produit, horaires, prix)
+      			<div class="row">
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_address">Votre adresse postale *</label>
+      						<input id="form_address" type="text" name="adress" class="form-control" placeholder="rue" required="required" >
+      						<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais vos données avec un tiers.</small>
+      					</div>
+      				</div>
+      			</div>
 
-Nom
-Prenom
-Email
-adresse
-n tel
+      			<div class="row">
+      				<div class="col-md-2">
+      					<div class="form-group">
+      						<input id="form_zip" type="text" name="zip" class="form-control" placeholder="code postal" required="required" >
+      					</div>
+      				</div>
+	      			<div class="col-md-4">
+      					<div class="form-group">
+      						<input id="form_city" type="text" name="city" class="form-control" placeholder="ville" required="required">
+      					</div>
+      				</div>
+      			</div>
 
-champ message
-bouton envoi
--->
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="exampleSelect1">Sélectionner votre sujet *</label>
+										<select id="exampleSelect1" class="form-control">
+											<option></option>
+											<option>Inscription atelier</option>
+											<option>Démarche éco-responsable</option>
+											<option>Recettes</option>
+											<option>Prix</option>
+											<option>Horaires</option>
+											<option>Autre</option>
+										</select>
+								</div>
+							</div>
+						</div>	
 
+      			<div class="row">
+      				<div class="col-md-6">
+      					<div class="form-group">
+      						<label for="form_message">Message *</label>
+      						<textarea id="form_message" name="message" class="form-control" placeholder="Saisir votre message..." rows="4" required="required" data-error="Please,leave us a message."></textarea>
+      					</div>
+      				</div>
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Nom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
+      				<div class="col-md-12">
+      					<div class="g-recaptcha" data-sitekey="6LeUEDQUAAAAAJdSd_OcaERCQaJKMQrZUhIwhs3P"></div>
+      				</div>
+      				
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Prenom</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
+      				<div class="col-md-12 col-md-push-5">
+      					<button type="submit" class="btn btn-primary">Envoyer</button>
+      					<!-- <input type="submit" class="btn btn-success btn-send light_purple_bg" value="Send message"> -->
+      				</div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1">Adresse</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1">Numéro tel</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
-
-
-
-  <div class="form-group">
-    <label for="exampleSelect1">Sujet</label>
-    <select class="form-control" id="exampleSelect1">
-      <option></option>
-      <option>Inscription atelier</option>
-      <option>Démarche eco-responsable</option>
-      <option>Recettes</option>
-      <option>Prix</option>
-      <option>Horaires</option>
-      <option>Autre</option>
-
-    </select>
-  </div>
-
-
-  <div class="form-group">
-    <label for="exampleTextarea">Votre message</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-  </div>
-
-  <div class="g-recaptcha" data-sitekey="6LeUEDQUAAAAAJdSd_OcaERCQaJKMQrZUhIwhs3P"></div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
+      				<div class="row">
+      					<div class="col-md-12">
+      						<p class="text-muted"><small><strong>*</strong> Champs obligatoires.</small></p>
+      					</div>
+      				</div>
+      			</div>
+      		</form>
+      	</div> <!-- /.col-lg-8 -->
+		</div> <!-- /.row-->
+	</div> <!-- container-fluid -->
 
 
 
@@ -219,26 +277,45 @@ bouton envoi
 		</div>
  -->
 
+	<footer>
 
+	  <div class="container-fluid">
 
+	    <div class="row text-center hautFooter">
 
+	      <div class="iconReseauxFooter col-xs-4">
+	        <a href="#"><img src="image/i_facebook.svg" alt="Icon Facebook"></a>
+	        <a href="#"><img src="image/i_pinterest.svg" alt="Icon Pinterest"></a>
+	      </div>
 
+	      <div class="col-xs-4">
+	        <h2>Chocolat en joie</h2>
+	          <p>11 rue de Poissy</p>
+	          <p>75005 Paris</p>
+	      </div>
 
+	      <div class="iconReseauxFooter col-xs-4">
+	        <a href="#"><img src="image/i_instagram.svg" alt="Icon Instagram"></a>
+	        <a href="#"><img src="image/i_gmail.svg" alt="Icon GMail"></a>
+	      </div>
 
+	    </div>
 
+	    <div class="row">
 
+	      <ul class="listeFooter">
+	        <li class="col-xs-2"><a href="#">CGU</a></li>
+	        <li class="col-xs-2"><a href="#">Mentions légales</a></li>
+	      </ul>
+	    </div>
 
+	    <div class="row basFooter">
+	      <p class="col-xs-12 text-center">© Chocolat en Joie 2017</p>
+	    </div>
 
+	  </div>
 
-
-
-
-<footer></footer>
-
-
-
-
-
+	</footer>
 
 
 <!--Google analytic-->
