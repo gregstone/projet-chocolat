@@ -1,3 +1,4 @@
+
 /*------------- GENERAL -------------*/
 
 h1 {
@@ -145,3 +146,33 @@ footer{
 .basFooter{
 	background-color: rgb(25, 25, 25);
 }
+
+
+/*------------- COOKIES -------------*/
+
+@media (max-width: 768px ) {
+
+    #band-cookies p {
+        padding: 15px 15px 0;
+    }
+
+    #band-cookies-ok,
+    #band-cookies-info {
+        display: block;
+        text-decoration: none;
+        padding: 10px 5px;
+        margin-top: 10px;
+        background-color: #444444;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #band-cookies-close {
+        left: 50%;
+        margin-left: -16px;
+        top: 0px;
+    }
+
+}
+

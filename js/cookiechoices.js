@@ -31,7 +31,7 @@
     var dismissLinkId = 'cookieChoiceDismiss';
 
     function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-      var butterBarStyles = 'position:fixed;width:100%;background-color:#8B4513;color:#40E0D0;' +
+      var butterBarStyles = 'position:fixed;width:100%;background-color:#000;color:#fff;' +
           'margin:0; left:0; top:0; padding:4px;z-index:1000;text-align:center;';
 
       var cookieConsentElement = document.createElement('div');
@@ -103,7 +103,8 @@
       dismissLink.id = dismissLinkId;
       dismissLink.href = '#';
       dismissLink.style.marginLeft = '15px';
-      dismissLink.style.color = '#40E0D0';
+      dismissLink.style.fontWeight = 'bold';
+      dismissLink.style.color = '#fff';
       return dismissLink;
     }
 
@@ -113,7 +114,8 @@
       infoLink.href = linkHref;
       infoLink.target = '_blank';
       infoLink.style.marginLeft = '15px';
-      infoLink.style.color = '#40E0D0';
+      infoLink.style.fontWeight = 'bold';
+      infoLink.style.color = '#fff';
       return infoLink;
     }
 
