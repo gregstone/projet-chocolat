@@ -24,6 +24,7 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 		<!--Google fonts-->
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 		<!--Fichier CSS-->
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		
@@ -272,80 +273,102 @@
 <!-- Section NOUS TROUVER-->
 
 	<section id="localisation">
-	  
-	  <div class="container-fluid">
-	    
-	    <div class="row">
-	      <a href="https://placeholder.com"><img class="col-xs-offset-2 col-xs-4" src="http://via.placeholder.com/350x250"></a>
-	      <a href="https://placeholder.com"><img class="col-xs-4" src="http://via.placeholder.com/350x250"></a>
-	    </div>
 
-	    <div class="row">
-	      <h2>Adresse</h2>
-	      <h2>Horaires</h2>
-	    </div>
+		<div class="container-fluid">
 
-	    <div class="row">
-	      <h2>Numéro de Tel</h2>
-	      <h2>Transports</h2>
-	    </div>
+			<div class="row center-block">
+				<div class="col-lg-2 col-lg-offset-5 text-center">
+					<h2>Nous trouver</h2>
+				</div>
+			</div>
+		
+<!-- API GOOGLE -->
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<iframe
+					width="100%"
+					height="300"
+					frameborder="0" style="border:0"
+					src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCrssm87fPaXFGodWXlx4ifBBvVUAn0Mc0&q=11+Rue+de+Poissy,Paris+France" allowfullscreen>
+				</iframe>
+			</div>
+		</div>
 
-	<!-- API GOOGLE -->
-
-	    <iframe
-	      width="450"
-	      height="250"
-	      frameborder="0" style="border:0"
-	      src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCrssm87fPaXFGodWXlx4ifBBvVUAn0Mc0&q=5+Rue+de+Poissy,Paris+France" allowfullscreen>
-	    </iframe>
-
-
-	  </div>
-
+		<div class="row">
+			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+				<br>
+				<img src="image/iconLieu.png" alt="Icone adresse" class="img-responsive center-block" width="8%">
+				<br>
+				<p><strong>Chocolat en Joie</strong>
+				<br>11, rue de Poissy
+				<br>75005 PARIS
+				<br> Tel. : 06 45 67 76 58</p>
+			</div>
+			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+				<br>
+				<img src="image/iconHoraires.png" alt="Icone horaires d'ouverture" class="img-responsive center-block" width="8%">
+				<br>
+				<p>Notre boutique est ouverte
+				<br>du lundi au samedi
+				<br>de 09h00 à 20h00
+				<br>(sans interruption)</p>
+				<br>
+			</div>
+			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+				<br>
+				<img src="image/iconMetro.png" alt="Icone du métro" class="img-responsive center-block" width="8%">
+				<br>
+				<p>Ligne 10 : Jussieu ou Maubert Mutualité
+				<br>Ligne 7 : Jussieu</p>
+			</div>				
+		</div>
 	</section>
 
+<!-- Footer -->
 
-
-	<footer>
-
-	  <div class="container-fluid">
-
-	    <div class="row text-center hautFooter">
-
-	      <div class="iconReseauxFooter col-xs-4">
-	        <a href="#"><img src="image/i_facebook.svg" alt="Icon Facebook"></a>
-	        <a href="#"><img src="image/i_pinterest.svg" alt="Icon Pinterest"></a>
-	      </div>
-
-	      <div class="col-xs-4">
-	        <h2>Chocolat en joie</h2>
-	          <p>11 rue de Poissy</p>
-	          <p>75005 Paris</p>
-	      </div>
-
-	      <div class="iconReseauxFooter col-xs-4">
-	        <a href="#"><img src="image/i_instagram.svg" alt="Icon Instagram"></a>
-	        <a href="#"><img src="image/i_gmail.svg" alt="Icon GMail"></a>
-	      </div>
-
-	    </div>
-
-	    <div class="row">
-
-	      <ul class="listeFooter">
-	        <li class="col-xs-2"><a href="#">CGU</a></li>
-	        <li class="col-xs-2"><a href="#">Mentions légales</a></li>
-	      </ul>
-	    </div>
-
-	    <div class="row basFooter">
-	      <p class="col-xs-12 text-center">© Chocolat en Joie 2017</p>
-	    </div>
-
-	  </div>
-
-	</footer>
-
+	<div class="content"></div>
+  	<footer id="myFooter">
+       <div class="container">
+       		<div class="row">
+       			<div class="col-sm-3">
+       				<img src="image/logo-white.svg" alt="Logo Chocolat en Joie"/>
+						</div>
+            <div class="col-sm-2">
+            	<ul>
+              	<li><a href="#">Accueil</a></li>
+              	<li><a href="#">Nos produits</a></li>
+              	<li><a href="#">Nos recettes</a></li>
+              	</ul>
+            	</div>
+            	<div class="col-sm-2">
+            		<ul>
+            			<li><a href="#">Ateliers</a></li>
+            			<li><a href="#">Nous trouver</a></li>
+            			<li><a href="#">Nous contacter</a></li>
+            		</ul>
+              </div>
+              <div class="col-sm-2">
+              	<ul>
+              		<li><a href="#">CGU</a></li>
+              		<li><a href="#">Mentions légales</a></li>
+              	</ul>
+              </div>
+            	<div class="col-sm-3">
+            		<div class="social-networks">
+            			<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            			<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            			<a href="#" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            		</div>
+            		<button type="button" class="btn btn-default">Contactez nous</button>
+            	</div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2017 Chocolat en Joie</p>
+        </div>
+    </footer>
+<!--/.Footer-->
 
 
 
@@ -371,7 +394,7 @@
 <!-- Utilisation des coockies -->
 	<script src="js/cookiechoices.js"></script>
 	<script>document.addEventListener ('DOMContentLoaded', function(event) {
-		cookieChoices.showCookieConsentBar ('En poursuivant votre navigation sur notre site, vous acceptez le dépôt de cookies qui nous permettront de vous proposer des contenus adaptés afin de vous offrir le meilleur service, d\’analyser le trafic et d\’effectuer des statistiques.', 'En savoir plus', 'J\’accepte', 'https://www.cnil.fr/fr');
+		cookieChoices.showCookieConsentBar ('En poursuivant votre navigation sur notre site, vous acceptez le dépôt de cookies qui nous permettront de vous proposer des contenus adaptés, d\’analyser le trafic et d\’effectuer des statistiques.', 'J\’accepte', 'En savoir plus', 'https://www.cnil.fr/fr');
 		});
 	</script>
 
