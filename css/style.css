@@ -260,6 +260,53 @@ nav.scroll .social {
     border-left: black solid 1px;
 }
 
+/*------- SECTION DEMARCHE QUALITÉ -------*/
+
+
+.qualité {
+
+    background-image: url(../image/_background/chocolate3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;   /*a voir */
+}
+
+
+.demarche-title {
+    width: 464px;
+    height: 73px;
+}
+
+
+.containerlabels {
+    width: 938px;
+    height: 302px;
+    display: flex;
+    justify-content: center;  
+
+
+}
+
+.item-label {
+    width: 211px;
+    height: 302px;
+    background-color: red;
+
+    
+}
+
+.message-sympa {
+    width: 248px;
+    height: 50px;
+
+
+}
+
+
+
 
 /*------- SECTION ATELIERS -------*/
 
