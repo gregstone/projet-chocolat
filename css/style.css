@@ -307,7 +307,6 @@ nav.scroll .social {
 
 
 
-
 /*------- SECTION ATELIERS -------*/
 
 .bgateliers {
@@ -509,7 +508,7 @@ nav.scroll .social {
 
 #myFooter .btn {
     color: #fff;
-    background-color: #421502;
+    background-color: #542A18;
     border-radius: 5px;
     border: none;
     width: 150px;
@@ -526,12 +525,9 @@ nav.scroll .social {
 }
 
 
-
 /* CSS used for positioning the footers at the bottom of the page. */
 
-
 /* You can remove this. */
-
 
 /*html{
     height: 100%;
@@ -573,6 +569,58 @@ body {
     }
 }
 
+
+/*------- PAGE NOUS CONTACTER -------*/
+
+.bgcontact {
+    background-image: url(../image/_background/chocolate8.jpg);
+ /*   background-attachment: fixed;  */
+    background-size: cover;
+    width: 100%;
+    height: 768px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact {
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#contact h1 {
+  font-size: 25px;
+  /*background-color: red;*/
+  border-bottom: 10px #000 double;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.fa-angle-down {
+  color: #F2EBBF;
+  border: 2px solid #F2EBBF;
+  border-radius: 50%;
+  position: relative;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 150px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+.btn-primary:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
 
 
 /*------------- MEDIA QUERIES -------------*/
