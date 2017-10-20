@@ -95,7 +95,11 @@ header a {
     color: white;
     justify-content: space-between;
 }
-
+header a:hover,
+header a:focus {
+    text-decoration: none;
+    /* color: #542A18; */
+}
 
 
 /*SOCIAL MEDIA ICONS*/
@@ -594,7 +598,6 @@ body {
 
 #contact h1 {
   font-size: 25px;
-  color: #000;
   /*background-color: red;*/
   border-bottom: 10px #000 double;
   font-weight: bolder;
