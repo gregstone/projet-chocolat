@@ -271,21 +271,28 @@ nav.scroll .social {
     height: 1000px;
     display: -webkit-flex;
     display: flex;
-    justify-content: center;   /*a voir */
+    flex-direction: column;
+    justify-content: center;
+     /*a voir */
 }
 
 
 .demarche-title {
-    width: 464px;
+    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 455;
+    width: 800px;
     height: 73px;
 }
 
 
 .containerlabels {
-    width: 938px;
+    margin: auto;
+    width: 1200px;
     height: 302px;
     display: flex;
-    justify-content: center;  
+    justify-content: space-around;  
 
 
 }
