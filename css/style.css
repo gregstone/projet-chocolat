@@ -157,6 +157,7 @@ nav.scroll .social {
 
 .color {
     padding: 20px 0;
+    padding-bottom: 50px;
     min-height: 200px;
     background-color: rgb(134, 68, 34);
     position: relative;
@@ -178,13 +179,10 @@ nav.scroll .social {
     position: relative;
 }
 
-
-.containerSuggestions {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 5%;
-    margin-right: 5%;
+.ecartementTextEtImage{
+    margin-top: 40px;
 }
+
 
 .colNoPadding {
     padding: 0px;
@@ -194,11 +192,27 @@ nav.scroll .social {
     width: 100%;
 }
 
-#produits h2 {
+/*#produits h2 {
     text-transform: uppercase;
-    font-weight: 900;
-    text-decoration: underline;
-    font-size: 5em;
+    border-width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    border-bottom: 10px black double;
+    font-weight: bolder;
+    
+}
+*/
+
+
+.titreProduct{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    border-bottom: 10px black double;
+    font-weight: bolder;
+    width: 500px;
+
+
 }
 
 #produits h2+p {
@@ -206,9 +220,10 @@ nav.scroll .social {
 }
 
 #produits h3 {
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.8em; 
 }
 
 #produits h4 {
@@ -221,34 +236,17 @@ nav.scroll .social {
     font-weight: bold;
 }
 
-.suggestion1 {
-    margin-left: 5%;
-    margin-right: 2%;
+.suggestion {
+    padding: 0 15px;
     background-color: white;
     box-shadow: 5px 5px 20px black;
+    margin-bottom: 20px;
 }
 
-.suggestion2 {
-    margin-left: 2%;
-    margin-right: 2%;
-    background-color: white;
-    box-shadow: 5px 5px 20px black;
-}
-
-.suggestion2 img {
+.suggestion img {
     width: 100%;
 }
 
-.suggestion3 {
-    margin-left: 3%;
-    margin-right: 5%;
-    background-color: white;
-    box-shadow: 5px 5px 20px black;
-}
-
-.suggestion3 img {
-    width: 100%;
-}
 
 .suggestionNbPieces {
     border-top: black solid 1px;
