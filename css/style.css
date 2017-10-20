@@ -341,6 +341,12 @@ nav.scroll .social {
 
 /*------- SECTION ATELIERS -------*/
 
+#ateliers .container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .bgateliers {
     background-image: url(../image/bkg_ateliers.png);
     background-repeat: no-repeat;
@@ -352,7 +358,6 @@ nav.scroll .social {
     justify-content: space-around;
     display: -webkit-flex;
     -webkit-flex-direction: column;
-    flex-direction: column;
     margin-top: 100px;
 }
 
@@ -415,6 +420,12 @@ nav.scroll .social {
 
 /*------- SECTION NOUS TROUVER -------*/
 
+#localisation {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 #localisation h2 {
     background: black;
     color: #fff;
@@ -426,11 +437,14 @@ nav.scroll .social {
 
 #localisation iframe {
     width: 100%;
-    margin: 0 ;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-#localisation .row {
+.iframe {
     width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
