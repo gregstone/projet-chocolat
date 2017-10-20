@@ -147,16 +147,21 @@ nav.scroll .social {
 .items-home {
     margin-bottom: 50px;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
     color: white;
+    font-size: 20px;
+
 }
 
-
+.logohome{
+    width: 500px;
+    height: 200px;
+}
 
 /*------- SECTION PRODUITS -------*/
 
 .color {
     padding: 20px 0;
+    padding-bottom: 50px;
     min-height: 200px;
     background-color: rgb(134, 68, 34);
     position: relative;
@@ -178,13 +183,10 @@ nav.scroll .social {
     position: relative;
 }
 
-
-.containerSuggestions {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 5%;
-    margin-right: 5%;
+.ecartementTextEtImage{
+    margin-top: 40px;
 }
+
 
 .colNoPadding {
     padding: 0px;
@@ -194,11 +196,27 @@ nav.scroll .social {
     width: 100%;
 }
 
-#produits h2 {
+/*#produits h2 {
     text-transform: uppercase;
-    font-weight: 900;
-    text-decoration: underline;
-    font-size: 5em;
+    border-width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    border-bottom: 10px black double;
+    font-weight: bolder;
+    
+}
+*/
+
+
+.titreProduct{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    border-bottom: 10px black double;
+    font-weight: bolder;
+    width: 500px;
+
+
 }
 
 #produits h2+p {
@@ -206,9 +224,10 @@ nav.scroll .social {
 }
 
 #produits h3 {
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.8em; 
 }
 
 #produits h4 {
@@ -221,34 +240,17 @@ nav.scroll .social {
     font-weight: bold;
 }
 
-.suggestion1 {
-    margin-left: 5%;
-    margin-right: 2%;
+.suggestion {
+    padding: 0 15px;
     background-color: white;
     box-shadow: 5px 5px 20px black;
+    margin-bottom: 20px;
 }
 
-.suggestion2 {
-    margin-left: 2%;
-    margin-right: 2%;
-    background-color: white;
-    box-shadow: 5px 5px 20px black;
-}
-
-.suggestion2 img {
+.suggestion img {
     width: 100%;
 }
 
-.suggestion3 {
-    margin-left: 3%;
-    margin-right: 5%;
-    background-color: white;
-    box-shadow: 5px 5px 20px black;
-}
-
-.suggestion3 img {
-    width: 100%;
-}
 
 .suggestionNbPieces {
     border-top: black solid 1px;
@@ -264,7 +266,7 @@ nav.scroll .social {
 
 
 .qualité {
-
+    z-index: 2;
     background-image: url(../image/_background/chocolate3.jpg);
     background-size: cover;
     width: 100%;
@@ -272,6 +274,7 @@ nav.scroll .social {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
+
     justify-content: center;
      /*a voir */
 }
@@ -284,6 +287,24 @@ nav.scroll .social {
     margin-top: 455;
     width: 800px;
     height: 73px;
+    justify-content: center;   /*a voir */
+    align-items: center;
+
+}
+
+
+
+
+}
+
+
+ .demarche-title  {
+    z-index: 10;
+    width: 464px;
+    height: 200px;
+    background-image: url(../image/_section-demarche/notredemarche.svg);
+    
+
 }
 
 
@@ -306,12 +327,15 @@ nav.scroll .social {
 }
 
 .message-sympa {
-    width: 248px;
+    width: 500px;
     height: 50px;
+    font-size: 20px; /* ne marche pas */
+    text-align: center;
+
+
 
 
 }
-
 
 
 
@@ -516,7 +540,7 @@ nav.scroll .social {
 
 #myFooter .btn {
     color: #fff;
-    background-color: #421502;
+    background-color: #542A18;
     border-radius: 5px;
     border: none;
     width: 150px;
@@ -533,12 +557,9 @@ nav.scroll .social {
 }
 
 
-
 /* CSS used for positioning the footers at the bottom of the page. */
 
-
 /* You can remove this. */
-
 
 /*html{
     height: 100%;
@@ -580,6 +601,58 @@ body {
     }
 }
 
+
+/*------- PAGE NOUS CONTACTER -------*/
+
+.bgcontact {
+    background-image: url(../image/_background/chocolate8.jpg);
+ /*   background-attachment: fixed;  */
+    background-size: cover;
+    width: 100%;
+    height: 768px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact {
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#contact h1 {
+  font-size: 25px;
+  /*background-color: red;*/
+  border-bottom: 10px #000 double;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.fa-angle-down {
+  color: #F2EBBF;
+  border: 2px solid #F2EBBF;
+  border-radius: 50%;
+  position: relative;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 150px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+.btn-primary:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
 
 
 /*------------- MEDIA QUERIES -------------*/

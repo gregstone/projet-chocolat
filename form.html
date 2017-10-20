@@ -1,79 +1,109 @@
 <!DOCTYPE html>
-
-
 <!--Internet explorer conditions-->
-
-
 <!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
 <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
 <!--[if IE 8]><html class="preIE9"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1 ">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ">
+    <!--À approfondir-->
+    <meta name="author" content="name">
+    <meta name="description" content="texte explicatif 150 caractères max">
+    <meta name="keywords" content="keywords,here">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-		<!--À approfondir-->
-		<meta name="author" content="name">
-		<meta name="description" content="texte explicatif 150 caractères max">
-		<meta name="keywords" content="keywords,here">
-
-		<!--Bootstrap-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<!--Favicon-->
-		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-		<!--Google fonts-->
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
-		<!--Fichier CSS-->
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-
-		<!--Meta property et name pour réseaux sociaux-->
-		<!-- Google console? -->
-		<!-- URL canonique? -->
-
-		<title>Chocolat en joie</title>
+    <!--Fichier CSS-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--Meta property et name pour réseaux sociaux-->
+    <!-- Google console? -->
+    <!-- URL canonique? -->
+    <title>Chocolat en joie</title>
 	</head>
 
 	<body>
 
-	<header> <!-- BARRE DE NAVIGATION -->		
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-3">
-					<a href="index.html"><img src="image/logo_chocolat1.svg" alt="Logo barre de chocolat" width="25%"><h1>Chocolat en Joie</h1></a>
+		<header>
+			<!-- BARRE DE NAVIGATION -->
+			<nav id="navbar" class="navbar navbar-toggleable-md navbar-light bg-faded">
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav text-center">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html">&#9670;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="produits.html">Nos produits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">&#9670;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Nos recettes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">&#9670;</a>
+						</li>
+						<div class="logo-navbar"></div>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">&#9670;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#ateliers">Ateliers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">&#9670;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#localisation">Nous trouver</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">&#9670;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="form.html">Nous contacter</a>
+						</li>
+					</ul>
 				</div>
-				<div class="col-xs-9 text-center list-inline">
-					<nav>
-						<ul class="nav navbar-nav pull-right">
-							<li><a href="index.html" class="active">Accueil</a></li>
-							<li><a href="#produits">Nos produits</a></li>
-							<li><a href="#localisation">Nous Trouver</a></li>
-							<li><a href="form.html">Nous Contacter</a></li>
-							<li><a href="#">Nos Recettes</a></li>
-							<div class="col-xs-2 list-inline pull-right">
-								<a href="#"><img src="image/i_facebook.svg" alt="Icon Facebook" width="20%"/></a>
-								<a href="#"><img src="image/i_pinterest.svg" alt="Icon Pinterest" width="20%"/></a>
-								<a href="#"><img src="image/i_instagram.svg" alt="Icon Instagram" width="20%"/></a>
-							</div>
-						</ul>
-					</nav>
+				<div class="social">
+					<ul class="item-social">
+						<li><img src="image/_social-icons/i_facebook.svg" alt="facebook logo"></li>
+						<li><img src="image/_social-icons/i_instagram.svg" alt="instagram logo"></li>
+						<li><img src="image/_social-icons/i_pinterest.svg" alt="pinterest logo"></li>
+					</ul>
 				</div>
-			</div>
-	</header>
+			</nav>
+		</header>
 
-	<div class="container-fluid">
-		<div class="row">
+  <section id="contact">
+
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-xs-12 bgcontact">
+  				<i class="fa fa-angle-down fa-3x center-block"></i>
+  			</div>
+  		</div>
+
 			<div class="col-lg-8 col-lg-offset-2">
-				<a href="https://placeholder.com"><img src="http://via.placeholder.com/1000x400" alt="" class="img-responsive"></a>
-			</div>
-                
-      <div class="col-lg-8 col-lg-offset-2">
+      	<br>
       	<h1>NOUS CONTACTER</h1>
 
       	<form id="contact-form" method="post" action="" role="form">
       		<div class="controls">
       			<div class="row">
       				<div class="col-md-6">
+      					<br>
       					<div class="form-group">
       						<label for="form_name">Votre prénom *</label>
       						<input id="form_name" type="text" name="name" class="form-control" placeholder="prénom" required="required" >
@@ -82,6 +112,7 @@
       				</div>
 
       				<div class="col-md-6">
+      					<br>
       					<div class="form-group">
       						<label for="form_lastname">Votre nom *</label>
       						<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="nom" required="required" >
@@ -177,145 +208,52 @@
 		</div> <!-- /.row-->
 	</div> <!-- container-fluid -->
 
+	
+	<!-- Footer -->
 
+	<div class="content"></div>
+  	<footer id="myFooter">
+       <div class="container">
+       		<div class="row">
+       			<div class="col-sm-3">
+       				<img src="image/logo-white.svg" alt="Logo Chocolat en Joie"/>
+						</div>
+            <div class="col-sm-2">
+            	<ul>
+              	<li><a href="index.html">Accueil</a></li>
+              	<li><a href="produits.html">Nos produits</a></li>
+              	<li><a href="recettes.html">Nos recettes</a></li>
+              	</ul>
+            	</div>
+            	<div class="col-sm-2">
+            		<ul>
+            			<li><a href="index.html#ateliers">Ateliers</a></li>
+            			<li><a href="index.html#localisation">Nous trouver</a></li>
+            			<li><a href="form.html">Nous contacter</a></li>
+            		</ul>
+              </div>
+              <div class="col-sm-2">
+              	<ul>
+              		<li><a href="#">CGU</a></li>
+              		<li><a href="#">Mentions légales</a></li>
+              	</ul>
+              </div>
+            	<div class="col-sm-3">
+            		<div class="social-networks">
+            			<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            			<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            			<a href="#" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            		</div>
+            		<button type="button" class="btn btn-default">Contactez nous</button>
+            	</div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2017 Chocolat en Joie</p>
+        </div>
+    </footer>
 
-
-
-
-
-<!--
-
-<div class="container animated fadeIn">
-
-  <div class="row">
-    <h1 class="header-title"> Contact </h1>
-    <hr>
-    <div class="col-sm-12" id="parent">
-    	<div class="col-sm-6">
-    	<iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaY32Qm3KWTkRuOnKfoIVZws&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY" allowfullscreen></iframe>
-    	</div>
-
-    	<div class="col-sm-6">
-    		<form action="form.php" class="contact-form" method="post">
-
-		        <div class="form-group">
-		          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
-		        </div>
-
-
-		        <div class="form-group form_left">
-		          <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
-		        </div>
-
-		      <div class="form-group">
-		           <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
-		      </div>
-		      <div class="form-group">
-		      <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
-		      <br>
-	      	  <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
-		      </div>
-     		</form>
-    	</div>
-    </div>
-  </div>
-
-  <div class="container second-portion">
-	<div class="row">
-         Boxes de Acoes
-    	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">
-				<div class="icon">
-					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">MAIL & WEBSITE</h3>
-						<p>
-							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp gondhiyahardik6610@gmail.com
-							<br>
-							<br>
-							<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.hardikgondhiya.com
-						</p>
-
-					</div>
-				</div>
-				<div class="space"></div>
-			</div>
-		</div>
-
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">
-				<div class="icon">
-					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">CONTACT</h3>
-    					<p>
-							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-9624XXXXX
-							<br>
-							<br>
-							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-7567065254
-						</p>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div>
-		</div>
-
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">
-				<div class="icon">
-					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">ADDRESS</h3>
-    					<p>
-							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot
-							 "Shree Krishna Krupa", Rajkot - 360001.
-						</p>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div>
-		</div>
- -->
-
-	<footer>
-
-	  <div class="container-fluid">
-
-	    <div class="row text-center hautFooter">
-
-	      <div class="iconReseauxFooter col-xs-4">
-	        <a href="#"><img src="image/i_facebook.svg" alt="Icon Facebook"></a>
-	        <a href="#"><img src="image/i_pinterest.svg" alt="Icon Pinterest"></a>
-	      </div>
-
-	      <div class="col-xs-4">
-	        <h2>Chocolat en joie</h2>
-	          <p>11 rue de Poissy</p>
-	          <p>75005 Paris</p>
-	      </div>
-
-	      <div class="iconReseauxFooter col-xs-4">
-	        <a href="#"><img src="image/i_instagram.svg" alt="Icon Instagram"></a>
-	        <a href="#"><img src="image/i_gmail.svg" alt="Icon GMail"></a>
-	      </div>
-
-	    </div>
-
-	    <div class="row">
-
-	      <ul class="listeFooter">
-	        <li class="col-xs-2"><a href="#">CGU</a></li>
-	        <li class="col-xs-2"><a href="#">Mentions légales</a></li>
-	      </ul>
-	    </div>
-
-	    <div class="row basFooter">
-	      <p class="col-xs-12 text-center">© Chocolat en Joie 2017</p>
-	    </div>
-
-	  </div>
-
-	</footer>
+<!--/.Footer-->
 
 
 <!--Google analytic-->
@@ -330,15 +268,12 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
     </script>
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-<!-- script pour captcha -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Global Javascript file -->
+    <script src="js/script.js"></script>
 
   </body>
 </html>
