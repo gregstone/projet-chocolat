@@ -2,9 +2,8 @@
 
 //Ancre ateliers
 
-$("#lien-ateliers").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#ancre-ateliers").offset().top
-    }, 2000);
+$(".sliding-link").click(function(e) {
+    e.preventDefault();
+    var aid = $(this).attr("href");
+    $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
 });
-
