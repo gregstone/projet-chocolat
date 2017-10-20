@@ -96,6 +96,11 @@ header a {
     justify-content: space-between;
 }
 
+header a:hover{
+    color: grey;
+    text-decoration: none;
+}
+
 
 
 /*SOCIAL MEDIA ICONS*/
