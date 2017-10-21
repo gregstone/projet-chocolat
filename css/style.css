@@ -603,21 +603,26 @@ nav.scroll .social {
 }
 
 #contact h1 {
-  font-size: 25px;
-  border-bottom: 10px #000 double;
+  font-size: 18px;
   font-weight: bolder;
+  border-bottom: 4px solid;
+}
+
+#contact p {
+  margin-left: 15px;
+  color: red;
+  font-style: italic;
   text-align: center;
-  padding-bottom: 5px;
+  padding-right: 160px;
 }
 
 .fa-angle-down {
-  color: #F2EBBF;
-  border: 2px solid #F2EBBF;
+  color: #362F2F;
+  border: 2px solid #362F2F;
   border-radius: 50%;
   position: relative;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 150px;
 }
 
 .btn-primary {
@@ -669,7 +674,6 @@ nav.scroll .social {
 /*------------- MEDIA QUERIES -------------*/
 
 /* COOKIES */
-
 @media (max-width: 767px) {
 
     #band-cookies p {
@@ -695,10 +699,40 @@ nav.scroll .social {
     }
 }
 
-
 /* FOOTER */
 @media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
+  #myFooter {
+    text-align: center;
+  }
+}
+
+/* PAGE CONTACT */
+@media screen and (max-width: 767px) {
+  .bgcontact {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .fa-angle-down {
+    color: transparent;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .btn-primary {
+    margin-top: 15px;
+    margin-left: 220px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #contact p {
+    text-align: center;
+    padding-right: 220px;
+  }
 }
