@@ -361,22 +361,17 @@ nav.scroll .social {
 
 #ateliers .container-fluid {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.bgateliers {
+    height: 998px;
     background-image: url(../image/bkg_ateliers.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    /*height: 500px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     display: -webkit-flex;
     -webkit-flex-direction: column;
-    margin-top: 100px;
+    margin: 0px;
 }
 
 .items-ateliers {
@@ -384,13 +379,17 @@ nav.scroll .social {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: bolder;
+    margin-top: 40px;
 }
 
 .items-wrap-ateliers {
-    /*background-color: yellow;*/
     background-color: white;
-    width: 30%;
-    margin-bottom: 80px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 55px;
 }
 
 #ateliers button {
@@ -398,27 +397,21 @@ nav.scroll .social {
     background-color: #000;
     border: none;
     width: 150px;
-    /*display: block;*/
-    margin: 0;
-    margin-bottom: 30px;
+    margin-top: 20px;
     padding-top: 10px;
-    line-height: 25px;
 }
 
 #ateliers h3 {
     font-size: 50px;
     color: #fff;
-    /*background-color: red;*/
     border-bottom: 10px white double;
     font-weight: bolder;
-    margin-top: 10px;
-    margin-bottom: 70px;
+
     padding-bottom: 5px;
     padding-top: 10px;
 }
 
 #ateliers p {
-    /*background-color: green;*/
     background-color: white;
     font-size: 20px;
     padding-top: 30px;
@@ -427,7 +420,6 @@ nav.scroll .social {
 #ateliers h2 {
     font-size: 40px;
     color: #000;
-    /*background-color: blue;*/
     background-color: white;
     font-weight: bolder;
     font-style: italic;
@@ -442,21 +434,31 @@ nav.scroll .social {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px;
+}
+#localisation .container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
 }
 
 #localisation h2 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
     background: black;
     color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: -5px;
-    margin-bottom: 20px;
 }
 
 #localisation iframe {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px;
 }
 
 .iframe {
@@ -478,10 +480,6 @@ nav.scroll .social {
 #myFooter {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
-}
-
-
-#myFooter {
     background-color: #000;
     color: white;
     padding-top: 30px;
@@ -582,63 +580,11 @@ nav.scroll .social {
     line-height: 25px;
 }
 
-@media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
-}
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-
-/* You can remove this. */
-
-/*html{
-    height: 100%;
-}
-
-body {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}*/
-
-
-/*------------- COOKIES -------------*/
-
-@media (max-width: 768px) {
-
-    #band-cookies p {
-        padding: 15px 15px 0;
-    }
-
-    #band-cookies-ok,
-    #band-cookies-info {
-        display: block;
-        text-decoration: none;
-        padding: 10px 5px;
-        margin-top: 10px;
-        background-color: #444444;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-    #band-cookies-close {
-        left: 50%;
-        margin-left: -16px;
-        top: 0px;
-    }
-}
-
 
 /*------- PAGE NOUS CONTACTER -------*/
 
 .bgcontact {
     background-image: url(../image/_background/chocolate8.jpg);
- /*   background-attachment: fixed;  */
     background-size: cover;
     width: 100%;
     height: 768px;
@@ -658,7 +604,6 @@ body {
 
 #contact h1 {
   font-size: 25px;
-  /*background-color: red;*/
   border-bottom: 10px #000 double;
   font-weight: bolder;
   text-align: center;
@@ -688,13 +633,6 @@ body {
 
 
 /*------- PAGE JURIDIQUE (MENTIONS LEGALES ET CGU) -------*/
-
-/*#cgu #mentions {
-    background-color: #fff;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-}*/
 
 #pageJuridique {
     width: 100%;
@@ -730,3 +668,37 @@ body {
 
 /*------------- MEDIA QUERIES -------------*/
 
+/* COOKIES */
+
+@media (max-width: 767px) {
+
+    #band-cookies p {
+        padding: 15px 15px 0;
+    }
+
+    #band-cookies-ok,
+    #band-cookies-info {
+        display: block;
+        text-decoration: none;
+        padding: 20px 5px;
+        margin-top: 20px;
+        background-color: #444444;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #band-cookies-close {
+        left: 50%;
+        margin-left: -20px;
+        top: 0px;
+    }
+}
+
+
+/* FOOTER */
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
