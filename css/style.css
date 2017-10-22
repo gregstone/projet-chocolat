@@ -96,6 +96,11 @@ header a {
     justify-content: space-between;
 }
 
+header a:hover{
+    color: grey;
+    text-decoration: none;
+}
+
 
 
 /*SOCIAL MEDIA ICONS*/
@@ -279,75 +284,103 @@ nav.scroll .social {
     background-image: url(../image/_background/chocolate3.jpg);
     background-size: cover;
     width: 100%;
-    height: 1000px;
+    height:800px;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+     /*a voir */
+}
+
+
+.demarche-title {
+    position: relative;
+    margin-top: 200px;
+    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     justify-content: center;   /*a voir */
     align-items: center;
-
-}
-
-
-
-
-}
-
-
- .demarche-title  {
-    z-index: 10;
+    background: no-repeat;
     width: 464px;
     height: 200px;
-    background-image: url(../image/_section-demarche/notredemarche.svg);
+    background-image: url("../image/_section-demarche/notredemarche.svg");
     
+
 }
 
 
 .containerlabels {
-    width: 938px;
+    margin: auto;
+    width: 1200px;
     height: 302px;
     display: flex;
-    justify-content: space-around;  
+    justify-content: space-around;
+     
 
 
 }
 
 .item-label {
-    width: 211px;
-    height: 302px;
-    background-color: red;
-
+    height: 300px;
     
+    color: white;
+    font-size: 26px;
+    justify-content: cneter;
+
 }
 
+
+.item-label img {
+    width: 100%;
+    height: 100px;
+
+
+}
+
+.item-label p {
+    text-align: center;
+    font-size: 22px;
+}
+
+.item-label h1 {
+
+    align-self: center;
+
+
+}
+
+
 .message-sympa {
+    position: relative;
     width: 500px;
     height: 50px;
     font-size: 20px; /* ne marche pas */
     text-align: center;
-
-
-
-
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: 600;
 }
 
 
 
 /*------- SECTION ATELIERS -------*/
 
-.bgateliers {
+#ateliers .container-fluid {
+    width: 100%;
+    height: 998px;
     background-image: url(../image/bkg_ateliers.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    /*height: 500px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     display: -webkit-flex;
     -webkit-flex-direction: column;
-    flex-direction: column;
-    margin-top: 100px;
+    margin: 0px;
 }
 
 .items-ateliers {
@@ -355,13 +388,17 @@ nav.scroll .social {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: bolder;
+    margin-top: 40px;
 }
 
 .items-wrap-ateliers {
-    /*background-color: yellow;*/
     background-color: white;
-    width: 30%;
-    margin-bottom: 80px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 55px;
 }
 
 #ateliers button {
@@ -369,27 +406,21 @@ nav.scroll .social {
     background-color: #000;
     border: none;
     width: 150px;
-    /*display: block;*/
-    margin: 0;
-    margin-bottom: 30px;
+    margin-top: 20px;
     padding-top: 10px;
-    line-height: 25px;
 }
 
 #ateliers h3 {
     font-size: 50px;
     color: #fff;
-    /*background-color: red;*/
     border-bottom: 10px white double;
     font-weight: bolder;
-    margin-top: 10px;
-    margin-bottom: 70px;
+
     padding-bottom: 5px;
     padding-top: 10px;
 }
 
 #ateliers p {
-    /*background-color: green;*/
     background-color: white;
     font-size: 20px;
     padding-top: 30px;
@@ -398,7 +429,6 @@ nav.scroll .social {
 #ateliers h2 {
     font-size: 40px;
     color: #000;
-    /*background-color: blue;*/
     background-color: white;
     font-weight: bolder;
     font-style: italic;
@@ -409,22 +439,41 @@ nav.scroll .social {
 
 /*------- SECTION NOUS TROUVER -------*/
 
+#localisation {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#localisation .container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
 #localisation h2 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
     background: black;
     color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: -5px;
-    margin-bottom: 20px;
 }
 
 #localisation iframe {
     width: 100%;
-    margin: 0 ;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
 }
 
-#localisation .row {
+.iframe {
     width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
@@ -440,10 +489,6 @@ nav.scroll .social {
 #myFooter {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
-}
-
-
-#myFooter {
     background-color: #000;
     color: white;
     padding-top: 30px;
@@ -544,63 +589,11 @@ nav.scroll .social {
     line-height: 25px;
 }
 
-@media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
-}
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-
-/* You can remove this. */
-
-/*html{
-    height: 100%;
-}
-
-body {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}*/
-
-
-/*------------- COOKIES -------------*/
-
-@media (max-width: 768px) {
-
-    #band-cookies p {
-        padding: 15px 15px 0;
-    }
-
-    #band-cookies-ok,
-    #band-cookies-info {
-        display: block;
-        text-decoration: none;
-        padding: 10px 5px;
-        margin-top: 10px;
-        background-color: #444444;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-    #band-cookies-close {
-        left: 50%;
-        margin-left: -16px;
-        top: 0px;
-    }
-}
-
 
 /*------- PAGE NOUS CONTACTER -------*/
 
 .bgcontact {
     background-image: url(../image/_background/chocolate8.jpg);
- /*   background-attachment: fixed;  */
     background-size: cover;
     width: 100%;
     height: 768px;
@@ -619,22 +612,26 @@ body {
 }
 
 #contact h1 {
-  font-size: 25px;
-  /*background-color: red;*/
-  border-bottom: 10px #000 double;
+  font-size: 18px;
   font-weight: bolder;
+  border-bottom: 4px solid;
+}
+
+#contact p {
+  margin-left: 15px;
+  color: red;
+  font-style: italic;
   text-align: center;
-  padding-bottom: 5px;
+  padding-right: 160px;
 }
 
 .fa-angle-down {
-  color: #F2EBBF;
-  border: 2px solid #F2EBBF;
+  color: #362F2F;
+  border: 2px solid #362F2F;
   border-radius: 50%;
   position: relative;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 150px;
 }
 
 .btn-primary {
@@ -649,4 +646,102 @@ body {
 }
 
 
+/*------- PAGE JURIDIQUE (MENTIONS LEGALES ET CGU) -------*/
+
+#pageJuridique {
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/_background/chocolate12.jpg);
+    background-attachment: fixed;
+    position: absolute;
+    font-size: medium;
+}
+
+.bgjuridique {
+    background-color: white;
+    opacity: 0.9;
+    height: 100%;
+}
+
+#cgu {
+    margin-top: 130px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+#cgu h2,h3 {
+    text-align: center;
+    font-weight: bolder;
+}
+#cgu h4 {
+    text-align: left;
+    font-weight: bold;
+}
+
+
+
 /*------------- MEDIA QUERIES -------------*/
+
+/* COOKIES */
+@media (max-width: 767px) {
+
+    #band-cookies p {
+        padding: 15px 15px 0;
+    }
+
+    #band-cookies-ok,
+    #band-cookies-info {
+        display: block;
+        text-decoration: none;
+        padding: 20px 5px;
+        margin-top: 20px;
+        background-color: #444444;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #band-cookies-close {
+        left: 50%;
+        margin-left: -20px;
+        top: 0px;
+    }
+}
+
+/* FOOTER */
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+}
+
+/* PAGE CONTACT */
+@media screen and (max-width: 767px) {
+  .bgcontact {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .fa-angle-down {
+    color: transparent;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .btn-primary {
+    margin-top: 15px;
+    margin-left: 220px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #contact p {
+    text-align: center;
+    padding-right: 220px;
+  }
+}
