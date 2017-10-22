@@ -13,7 +13,32 @@
     border-bottom: 10px black double;
     font-weight: bolder;
     display: inline;
-    margin-top: 20px;
+    margin-top: 100px;
+}
+
+.section-general{
+    margin-top: 100px;
+    /* margin-bottom: 100px;  sans effets ! */  
 }
 
 
+.img-product{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.img-product:hover{
+    webkit-filter: blur(2px); /* Chrome, Safari, Opera */
+    filter: blur(2px);
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+.btnProduct{
+    background-color: blue;
+}
