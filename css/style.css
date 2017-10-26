@@ -246,9 +246,7 @@ display: none;
     font-size: 50px;
     border-bottom: 10px black double;
     font-weight: bolder;
-    width: 500px;
-
-
+    display: inline-block;
 }
 
 #produits h2+p {
@@ -272,10 +270,14 @@ display: none;
     font-weight: bold;
 }
 
+#produits a {
+    color: black;
+}
+
 .suggestion {
     padding: 0 15px;
     background-color: white;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 3px 3px 10px black;
     margin-bottom: 20px;
 }
 
@@ -293,6 +295,13 @@ display: none;
 .suggestionPoids {
     border-left: black solid 1px;
 }
+
+@media (max-width: 768px) {
+    .titreProduct{
+        font-size: 35px;
+    }
+}
+
 
 /*------- SECTION DEMARCHE QUALITÉ -------*/
 
@@ -389,22 +398,17 @@ display: none;
 
 #ateliers .container-fluid {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.bgateliers {
+    height: 998px;
     background-image: url(../image/bkg_ateliers.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    /*height: 500px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     display: -webkit-flex;
     -webkit-flex-direction: column;
-    margin-top: 100px;
+    margin: 0px;
 }
 
 .items-ateliers {
@@ -412,13 +416,17 @@ display: none;
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: bolder;
+    margin-top: 40px;
 }
 
 .items-wrap-ateliers {
-    /*background-color: yellow;*/
     background-color: white;
-    width: 30%;
-    margin-bottom: 80px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 55px;
 }
 
 #ateliers button {
@@ -426,27 +434,21 @@ display: none;
     background-color: #000;
     border: none;
     width: 150px;
-    /*display: block;*/
-    margin: 0;
-    margin-bottom: 30px;
+    margin-top: 20px;
     padding-top: 10px;
-    line-height: 25px;
 }
 
 #ateliers h3 {
     font-size: 50px;
     color: #fff;
-    /*background-color: red;*/
     border-bottom: 10px white double;
     font-weight: bolder;
-    margin-top: 10px;
-    margin-bottom: 70px;
+
     padding-bottom: 5px;
     padding-top: 10px;
 }
 
 #ateliers p {
-    /*background-color: green;*/
     background-color: white;
     font-size: 20px;
     padding-top: 30px;
@@ -455,7 +457,6 @@ display: none;
 #ateliers h2 {
     font-size: 40px;
     color: #000;
-    /*background-color: blue;*/
     background-color: white;
     font-weight: bolder;
     font-style: italic;
@@ -470,21 +471,31 @@ display: none;
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px;
+}
+#localisation .container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
 }
 
 #localisation h2 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
     background: black;
     color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: -5px;
-    margin-bottom: 20px;
 }
 
 #localisation iframe {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px;
 }
 
 .iframe {
@@ -506,10 +517,6 @@ display: none;
 #myFooter {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
-}
-
-
-#myFooter {
     background-color: #000;
     color: white;
     padding-top: 30px;
@@ -610,63 +617,11 @@ display: none;
     line-height: 25px;
 }
 
-@media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
-}
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-
-/* You can remove this. */
-
-/*html{
-    height: 100%;
-}
-
-body {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}*/
-
-
-/*------------- COOKIES -------------*/
-
-@media (max-width: 768px) {
-
-    #band-cookies p {
-        padding: 15px 15px 0;
-    }
-
-    #band-cookies-ok,
-    #band-cookies-info {
-        display: block;
-        text-decoration: none;
-        padding: 10px 5px;
-        margin-top: 10px;
-        background-color: #444444;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-    #band-cookies-close {
-        left: 50%;
-        margin-left: -16px;
-        top: 0px;
-    }
-}
-
 
 /*------- PAGE NOUS CONTACTER -------*/
 
 .bgcontact {
     background-image: url(../image/_background/chocolate8.jpg);
- /*   background-attachment: fixed;  */
     background-size: cover;
     width: 100%;
     height: 768px;
@@ -685,22 +640,26 @@ body {
 }
 
 #contact h1 {
-  font-size: 25px;
-  /*background-color: red;*/
-  border-bottom: 10px #000 double;
+  font-size: 18px;
   font-weight: bolder;
+  border-bottom: 4px solid;
+}
+
+#contact p {
+  margin-left: 15px;
+  color: red;
+  font-style: italic;
   text-align: center;
-  padding-bottom: 5px;
+  padding-right: 160px;
 }
 
 .fa-angle-down {
-  color: #F2EBBF;
-  border: 2px solid #F2EBBF;
+  color: #362F2F;
+  border: 2px solid #362F2F;
   border-radius: 50%;
   position: relative;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: 150px;
 }
 
 .btn-primary {
@@ -716,13 +675,6 @@ body {
 
 
 /*------- PAGE JURIDIQUE (MENTIONS LEGALES ET CGU) -------*/
-
-/*#cgu #mentions {
-    background-color: #fff;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-}*/
 
 #pageJuridique {
     width: 100%;
@@ -754,11 +706,7 @@ body {
     font-weight: bold;
 }
 
-
-
 /*------------- MEDIA QUERIES -------------*/
-
-
 @media screen and (max-width: 640px) {
 
 
@@ -1049,3 +997,66 @@ display:none;
 
 
 
+/* COOKIES */
+@media (max-width: 767px) {
+
+    #band-cookies p {
+        padding: 15px 15px 0;
+    }
+
+    #band-cookies-ok,
+    #band-cookies-info {
+        display: block;
+        text-decoration: none;
+        padding: 20px 5px;
+        margin-top: 20px;
+        background-color: #444444;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #band-cookies-close {
+        left: 50%;
+        margin-left: -20px;
+        top: 0px;
+    }
+}
+
+/* FOOTER */
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+}
+
+/* PAGE CONTACT */
+@media screen and (max-width: 767px) {
+  .bgcontact {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .fa-angle-down {
+    color: transparent;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .btn-primary {
+    margin-top: 15px;
+    margin-left: 220px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #contact p {
+    text-align: center;
+    padding-right: 220px;
+  }
+}

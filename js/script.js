@@ -20,7 +20,3 @@ window.onscroll = () => {
         header.classList.toggle('menu-opened');
     }
 }());
-
-
-
-
