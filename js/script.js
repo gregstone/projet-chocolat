@@ -10,3 +10,13 @@ window.onscroll = () => {
 };
 
 
+// Script controling the burger menu
+
+(function(){
+    var burger = document.querySelector('.burger-container'),
+        header = document.querySelector('.header-burger');
+    
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened');
+    }
+}());
