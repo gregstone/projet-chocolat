@@ -17,7 +17,8 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--Favicon-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="image/favicon.svg" type="image/favicon.svg">
+    <link rel="icon" type="image/png" href="image/favicon.png">
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -36,43 +37,43 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="index.html">&#9670;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Nos produits</a>
+                        <a class="nav-link" href="pageProduits.html">Nos produits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">&#9670;</a>
+                        <a class="nav-link" href="">&#9670;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nos recettes</a>
+                        <a class="nav-link" href="recettes.html">Nos recettes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">&#9670;</a>
+                        <a class="nav-link" href="">&#9670;</a>
                     </li>
-                    <div class="logo-navbar"></div>
+                    <div class="logo-navbar"><a href="index.html"></a></div>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">&#9670;</a>
+                        <a class="nav-link" href="">&#9670;</a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link sliding-link" href="#goto-atelier">Atelier</a>
+                        <a class="nav-link sliding-link" href="#goto-atelier">Nos ateliers</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">&#9670;</a>
+                        <a class="nav-link" href="">&#9670;</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link sliding-link" href="#goto-noustrouver">Nous trouver</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="form.html">&#9670;</a>
+                        <a class="nav-link" href="">&#9670;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nous contacter</a>
+                        <a class="nav-link" href="contact.html">Nous contacter</a>
                     </li>
                 </ul>
             </div>
@@ -85,14 +86,37 @@
             	</div>
         </nav>
     </header>
-   
+
+<!-- BURGER MENU -->
+
+  <div class="header-burger">
+    <div class="burger-container">
+      <div id="burger">
+        <div class="bar topBar"></div>
+        <div class="bar btmBar"></div>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="index.html">Accueil</a></li>
+      <li class="menu-item"><a href="pageProduits.html">Nos produits</a></li>
+      <li class="menu-item"><a href="recettes.html">Nos recettes</a></li>
+      <li class="menu-item"><a href="#">Nos ateliers</a></li>
+      <li class="menu-item"><a href="#">Nous trouver</a></li>
+      <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
     <!-- Section ACCUEIL -->
     <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 text-center bghomepage">
                     <div>
-                        <div class="items-home"> <img class="logohome" src="image/logo-white.svg" alt=""></div>
+                        <div>
+                        <div class="row items-home-1"> <img class="logohome" src="image/logo-white.svg" alt=""></div>
                         <h2 class="items-home">“Une vie sans chocolat <br>est une vie à laquelle manque l'essentiel...”</h2>
                         <div class="items-home"> <img src="image/_accueil/bienvenue-white.svg" alt=""></div>
                     </div>
@@ -111,16 +135,16 @@
 		  		
 				<div class="wrapper">
 
-			  		<div class="row center-block">
-			  			<div class="col-xs-12 text-center">
-			  				<h2 class="titreProduct center-block">Nos<br>suggestions</h2>
+			  		<div class="row">
+			  			<div class="col-sm-12 text-center">
+			  				<h2 class="titreProduct center-block text-center">Nos<br>suggestions</h2>
 			  				<p>Découvrez nos créations</p>
 			  			</div>
 			    	</div>
 
 					<div class="containerSuggestions">
 			    	
-                        <div class="col-md-8 col-md-offset-2">  
+                        <div class="col-md-8 col-md-offset-2 col-xs-12">  
                                 
                             
     			    		<div class="row ecartementTextEtImage">
@@ -128,8 +152,8 @@
 
     		<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-    							<div class="col-sm-4 "> <!-- Suggestion 1 -->
-        							<div class="suggestion-wrapper suggestion">
+    							<div class="col-sm-4"> <!-- Suggestion 1 -->
+        							<a href="#"><div class="suggestion-wrapper suggestion">
         								<div class="row">
         									<div class="col-sm-12 colNoPadding">
         										<img class="img-responsive" src="./image/_section-produits/produit1.jpg" alt="">
@@ -157,14 +181,14 @@
         										<h5>200g</h5>
         									</div>
         								</div>
-                                    </div>  
+                                    </div></a> 
     							</div>
 
     		<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
     							<div class="col-sm-4 "> <!-- Suggestion 1 -->
-                                    <div class="suggestion-wrapper suggestion">
+                                    <a href="#"><div class="suggestion-wrapper suggestion">
                                         <div class="row">
                                             <div class="col-sm-12 colNoPadding">
                                                 <img src="./image/_section-produits/produit2.jpg" alt="">
@@ -192,13 +216,13 @@
                                                 <h5>200g</h5>
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div></a>  
                                 </div>
 
     		<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     							<div class="col-sm-4"> <!-- Suggestion 1 -->
-                                    <div class="suggestion-wrapper suggestion">
+                                    <a href="#"><div class="suggestion-wrapper suggestion">
                                         <div class="row">
                                             <div class="col-sm-12 colNoPadding">
                                                 <img src="./image/_section-produits/produit3.jpg" alt="">
@@ -226,7 +250,7 @@
                                                 <h5>200g</h5>
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div></a>  
                                 </div>
                                
     			    		</div> <!-- row -->
@@ -260,6 +284,8 @@
         </div>  -->
 
 <section class="qualité container-fluid">
+    <div class="row">  
+    <div class="col-xs-12">       
     <div class="demarche-title">
     </div>
     <div class="containerlabels">
@@ -290,34 +316,68 @@ avec ces cochonneries. Ah ça non!</p>
     <div class="message-sympa">
         <h2>100% SYMPA <br>POUR LA NATURE</h2>
     </div>
+    </div> 
+</div>
 </section>
 
+
+ 
+   
     <!-- Section Atelier-->
-   	<section id="ateliers">
-		  <div class="container-fluid" id="goto-atelier">
+    <section id="ateliers">
+      <div id="goto-atelier"></div>
+		  <div class="container-fluid">
+
 			  <div class="row center-block">
+
 				  <div class="col-lg-12 text-center bgateliers">
-					  <h3 class="items-ateliers center-block">LES<br>ATELIERS</h3>
-					  <div class="items-wrap-ateliers center-block">
-						  <p>MERCREDI 19 OCTOBRE</p>
-						  <h2 class="items-ateliers">MOUSSE<br>AU CHOCOLAT</h2>
-						  <a href="form.html"><button type="button" class="btn btn-default">Je m'inscris</button></a>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-	  </section>
+					  <h3 class="items-ateliers center-block">NOS<br>ATELIERS</h3>
+          </div>
+        </div>
+        <div class="row center-block">
+          <div class="col-lg-4 col-lg-offset-4 center-block text-center items-wrap-ateliers">
+            <p>MERCREDI 19 OCTOBRE</p>
+            <h2 class="items-ateliers">MOUSSE<br>AU CHOCOLAT</h2>
+            <a href="contact.html"><button type="button" class="btn btn-default">Je m'inscris</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Section PHOTO AMBIANCE/ATMOSPHÈRE-->
-    <section></section>
+<!--
+    <section id="ateliers">
+      <div class="container-fluid" id="goto-atelier">
+        <div class="row center-block">
+          <div class="col-lg-12 text-center bgateliers">
+            <h3 class="items-ateliers center-block">LES<br>ATELIERS</h3>
+            <div class="items-wrap-ateliers center-block">
+              <p>MERCREDI 19 OCTOBRE</p>
+              <h2 class="items-ateliers">MOUSSE<br>AU CHOCOLAT</h2>
+              <a href="contact.html"><button type="button" class="btn btn-default">Je m'inscris</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
 
-  <!-- Section NOUS TROUVER-->
 
-	<section id="localisation">
-        <div id="goto-noustrouver"></div>
-		<div class="container-fluid">
+<!-- Section NOUS TROUVER-->
+
+
+  <section id="localisation">
+    <div id="goto-noustrouver"></div>
+
 		
-  <!-- API GOOGLE -->
+    <div class="container-fluid">
+      
+      <div class="row">
+        <div class="col-xs-12 center-block text-center">
+          <h2>Nous trouver</h2>
+        </div>
+      </div>
+    
+<!-- API GOOGLE -->
 		<div class="row">
 			<div class="col-xs-12 center-block iframe">
 				<iframe
@@ -329,18 +389,12 @@ avec ces cochonneries. Ah ça non!</p>
 			</div>
 		</div>
 		
-		<div class="row center-block">
-			<div class="col-lg-4 col-lg-offset-4 text-center">
-				<h2>Nous trouver</h2>
-			</div>
-		</div>
-		
 		<div class="row">
 			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
 				<br>
 				<img src="image/iconLieu.png" alt="Icone adresse" class="img-responsive center-block" width="8%">
 				<br>
-				<p><strong>Chocolat en Joie</strong>
+				<p>Chocolat en Joie
 				<br>11, rue de Poissy
 				<br>75005 PARIS
 				<br> Tel. : 06 45 67 76 58</p>
@@ -367,7 +421,7 @@ avec ces cochonneries. Ah ça non!</p>
 
 
   <!-- Footer -->
-	<div class="content"></div>
+  <div class="content"></div>
   	<footer id="myFooter">
        <div class="container">
        		<div class="row">
@@ -377,21 +431,21 @@ avec ces cochonneries. Ah ça non!</p>
             <div class="col-sm-2">
             	<ul>
               	<li><a href="#">Accueil</a></li>
-              	<li><a href="#">Nos produits</a></li>
-              	<li><a href="#">Nos recettes</a></li>
+              	<li><a href="pageProduits.html">Nos produits</a></li>
+              	<li><a href="recettes.html">Nos recettes</a></li>
               	</ul>
             	</div>
             	<div class="col-sm-2">
             		<ul>
-            			<li><a href="#">Ateliers</a></li>
-            			<li><a href="#">Nous trouver</a></li>
-            			<li><a href="#">Nous contacter</a></li>
+            			<li><a href="#goto-atelier">Nos ateliers</a></li>
+            			<li><a href="#goto-noustrouver">Nous trouver</a></li>
+            			<li><a href="contact.html">Nous contacter</a></li>
             		</ul>
               </div>
               <div class="col-sm-2">
               	<ul>
-              		<li><a href="#">CGU</a></li>
-              		<li><a href="#">Mentions légales</a></li>
+              		<li><a href="juridique.html">CGU</a></li>
+              		<li><a href="juridique.html#mentions">Mentions légales</a></li>
               	</ul>
               </div>
             	<div class="col-sm-3">
@@ -400,7 +454,7 @@ avec ces cochonneries. Ah ça non!</p>
             			<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             			<a href="#" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
             		</div>
-            		<button type="button" class="btn btn-default">Contactez nous</button>
+            		<a href="contact.html"><button type="button" class="btn btn-default">Contactez nous</button></a>
             	</div>
             </div>
         </div>

@@ -36,45 +36,47 @@
 			<!-- BARRE DE NAVIGATION -->
 			<nav id="navbar" class="navbar navbar-toggleable-md navbar-light bg-faded">
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav text-center">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="produits.html">Nos produits</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Nos recettes</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<div class="logo-navbar"></div>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html#ateliers">Ateliers</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html#localisation">Nous trouver</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="form.html">Nous contacter</a>
-						</li>
-					</ul>
+					  <ul class="navbar-nav text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pageProduits.html">Nos produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recettes.html">Nos recettes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <div class="logo-navbar"><a href="index.html"></a></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link sliding-link" href="index.html#goto-atelier">Nos ateliers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sliding-link" href="index.html#goto-noustrouver">Nous trouver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Nous contacter</a>
+                    </li>
+                </ul>
 				</div>
 				<div class="social">
 					<ul class="item-social">
@@ -86,17 +88,42 @@
 			</nav>
 		</header>
 
+
+<!-- BURGER MENU -->
+  <div class="header-burger">
+    <div class="burger-container">
+      <div id="burger">
+        <div class="bar topBar"></div>
+        <div class="bar btmBar"></div>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="index.html">Accueil</a></li>
+      <li class="menu-item"><a href="pageProduits.html">Nos produits</a></li>
+      <li class="menu-item"><a href="recettes.html">Nos recettes</a></li>
+      <li class="menu-item"><a href="#">Nos ateliers</a></li>
+      <li class="menu-item"><a href="#">Nous trouver</a></li>
+      <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+    
+
   <section id="contact">
 
   	<div class="container-fluid">
   		<div class="row">
   			<div class="col-xs-12 bgcontact">
-  				<i class="fa fa-angle-down fa-3x center-block"></i>
+  				<a href="#goto-form" class="center-block"><i class="fa fa-angle-down fa-3x center-block"></i></a>
   			</div>
   		</div>
 
 			<div class="col-lg-8 col-lg-offset-2">
-      	<br>
+      	 <div id="goto-form"><br></div>
       	<h1>NOUS CONTACTER</h1>
 
       	<form id="contact-form" method="post" action="" role="form">
@@ -204,6 +231,7 @@
       				</div>
       			</div>
       		</form>
+          <div class="g-recaptcha" data-sitekey="6LdKXDUUAAAAAK63xUUOMsLHY2p3JnhW0kKkVJrN"></div>
       	</div> <!-- /.col-lg-8 -->
 		</div> <!-- /.row-->
 	</div> <!-- container-fluid -->
@@ -227,15 +255,15 @@
             	</div>
             	<div class="col-sm-2">
             		<ul>
-            			<li><a href="index.html#ateliers">Ateliers</a></li>
+            			<li><a href="index.html#ateliers">Nos ateliers</a></li>
             			<li><a href="index.html#localisation">Nous trouver</a></li>
-            			<li><a href="form.html">Nous contacter</a></li>
+            			<li><a href="contact.html">Nous contacter</a></li>
             		</ul>
               </div>
               <div class="col-sm-2">
               	<ul>
-              		<li><a href="#">CGU</a></li>
-              		<li><a href="#">Mentions légales</a></li>
+              		<li><a href="juridique.html">CGU</a></li>
+              		<li><a href="juridique.html">Mentions légales</a></li>
               	</ul>
               </div>
             	<div class="col-sm-3">
@@ -244,7 +272,7 @@
             			<a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             			<a href="#" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
             		</div>
-            		<button type="button" class="btn btn-default">Contactez nous</button>
+            		<a href="contact.html"><button type="button" class="btn btn-default">Contactez nous</button></a>
             	</div>
             </div>
         </div>
@@ -274,6 +302,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Global Javascript file -->
     <script src="js/script.js"></script>
+    <!-- Captcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
   </body>
 </html>
