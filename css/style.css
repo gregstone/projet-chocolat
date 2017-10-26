@@ -219,9 +219,7 @@ nav.scroll .social {
     font-size: 50px;
     border-bottom: 10px black double;
     font-weight: bolder;
-    width: 500px;
-
-
+    display: inline-block;
 }
 
 #produits h2+p {
@@ -245,10 +243,14 @@ nav.scroll .social {
     font-weight: bold;
 }
 
+#produits a {
+    color: black;
+}
+
 .suggestion {
     padding: 0 15px;
     background-color: white;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 3px 3px 10px black;
     margin-bottom: 20px;
 }
 
@@ -266,6 +268,13 @@ nav.scroll .social {
 .suggestionPoids {
     border-left: black solid 1px;
 }
+
+@media (max-width: 768px) {
+    .titreProduct{
+        font-size: 35px;
+    }
+}
+
 
 /*------- SECTION DEMARCHE QUALITÉ -------*/
 
