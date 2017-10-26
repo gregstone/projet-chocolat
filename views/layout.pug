@@ -1,0 +1,109 @@
+doctype html
+// Internet explorer conditions
+//if lte IE 6
+  html.preIE7.preIE8.preIE9
+//if IE 7
+  html.preIE8.preIE9
+//if IE 8
+  html.preIE9
+// [if gte IE 9] <!
+html
+  // <![endif]
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width,initial-scale=1 ')
+    // À approfondir
+    meta(name='author', content='name')
+    meta(name='description', content='texte explicatif 150 caractères max')
+    meta(name='keywords', content='keywords,here')
+    // Bootstrap
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Favicon
+    link(rel='shortcut icon', href='image/favicon.svg', type='image/favicon.svg')
+    link(rel='icon', type='image/png', href='image/favicon.png')
+    // Google fonts
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+    // Fichier CSS
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+    // Meta property et name pour réseaux sociaux
+    // Google console?
+    // URL canonique?
+    title Chocolat en joie
+    block css 
+  body
+    include header
+    block contenu
+
+    .content
+        footer#myFooter
+          .container
+            .row
+              .col-sm-3
+                img(src='image/logo-white.svg', alt='Logo Chocolat en Joie')
+              .col-sm-2
+                ul
+                  li
+                    a(href='#') Accueil
+                  li
+                    a(href='pageProduits.html') Nos produits
+                  li
+                    a(href='recettes.html') Nos recettes
+              .col-sm-2
+                ul
+                  li
+                    a(href='#goto-atelier') Nos ateliers
+                  li
+                    a(href='#goto-noustrouver') Nous trouver
+                  li
+                    a(href='contact.html') Nous contacter
+              .col-sm-2
+                ul
+                  li
+                    a(href='juridique.html') CGU
+                  li
+                    a(href='juridique.html#mentions') Mentions légales
+              .col-sm-3
+                .social-networks
+                  a.facebook(href='#')
+                    i.fa.fa-facebook
+                  a.instagram(href='#')
+                    i.fa.fa-instagram(aria-hidden='true')
+                  a.pinterest(href='#')
+                    i.fa.fa-pinterest(aria-hidden='true')
+                a(href='contact.html')
+                  button.btn.btn-default(type='button') Contactez nous
+          .footer-copyright
+            p © 2017 Chocolat en Joie
+        // /.Footer
+        // Google analytic
+        script(type='text/javascript').
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+          })();
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        // Global Javascript file
+        script(src='js/script.js')
+        // Utilisation des coockies
+        script(src='js/cookiechoices.js')
+        script.
+          document.addEventListener ('DOMContentLoaded', function(event) {
+          cookieChoices.showCookieConsentBar ('En poursuivant votre navigation sur notre site, vous acceptez le dépôt de cookies qui nous permettront de vous proposer des contenus adaptés, d\\’analyser le trafic et d\’effectuer des statistiques.', 'J\’accepte', 'En savoir plus', 'https://www.cnil.fr/fr');
+          });
+        // Gestion des ancres
+        script(src='js/ancres.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
+    
