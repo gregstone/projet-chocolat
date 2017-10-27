@@ -1,3 +1,4 @@
+include mixins-fp
 mixin block-product(titre)
     .container-fluid
         .row
@@ -18,29 +19,14 @@ mixin block-product(titre)
             h2 Produit 4
             img(src='http://via.placeholder.com/300x300', alt='')
           .col-xs-4
-            h2 Produit 5
-            img.img-responsive(src='http://via.placeholder.com/300x300', alt='')
+            h2.text Produit 5
+            |   :
+            a(data-toggle='modal', data-target='#modalCBlancPTrois')
+              img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
+              +fiche-produit('Http//:www.google.com', 1, 'chocolat blanc','content p','ingredients','content p4')
           .col-xs-4
             h2.text Produit 6
             |   :
             a(data-toggle='modal', data-target='#modalCBlancPTrois')
               img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
-        article
-            // FICHE PRODUIT MODAL BOOTSTRAP
-            #modalCBlancPTrois.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-              .modal-dialog(role='document')
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                      span(aria-hidden='true') ×
-                  .modal-body.text-center
-                    img(src='http://via.placeholder.com/350x150', alt='')
-                    div
-                      h2 Delice chocolat blanc vanille
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel urna mauris. Integer vitae massa a nisl porttitor sagittis. Sed ut ligula at neque malesuada eleifend. Nulla venenatis laoreet nisi eget euismod. Praesent in nisi vel turpis suscipit maximus. Aenean eu pellentesque ipsum. Cras sit amet eros libero. Duis sagittis nisl enim, ac posuere mauris porta a. Etiam commodo lacinia sem ac
-                      h2 Ingrédients
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel urna mauris. Integer vitae massa a nisl porttitor sagittis. Sed ut ligula at neque malesuada eleifend. Nulla venenatis laoreet nisi eget euismod. Praesent in nisi vel turpis suscipit maximus. Aenean eu pellentesque ipsum. Cras sit amet eros libero. Duis sagittis nisl enim, ac posuere mauris porta a. Etiam commodo lacinia sem ac
-                  .modal-footer
-                    button.btn.btn-default(type='button', data-dismiss='modal') Close
+              +fiche-produit('Http//:www.google.com', 2, 'chocolat blanc','content p1','ingredients','content p2')
