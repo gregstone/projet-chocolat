@@ -1,6 +1,5 @@
 extends layout
 include mixins
-include mixins-fp
 block contenu 
     section
       .container-fluid
@@ -67,13 +66,43 @@ block contenu
                 button.btn.btn-default(type='button', data-dismiss='modal') Close
     // SECTION CHOCOLAT BLANC
     section#chocolatBlanc
-      +block-product('nos chocolats blancs')
+       .container-fluid
+        .row
+          .text-center
+            h2.titreSection=titre
+        .row
+          .col-xs-4
+            h2 Produit 1
+            img(src='http://via.placeholder.com/300x300', alt='')
+          .col-xs-4
+            h2 Produit 2
+            img.img-responsive(src='http://via.placeholder.com/300x300', alt='')
+          .col-xs-4
+            h2.text Produit 3
+            img(src='http://via.placeholder.com/300x300', alt='')
+        .row
+          .col-xs-4
+            h2 Produit 4
+            img(src='http://via.placeholder.com/300x300', alt='')
+          .col-xs-4
+            h2.text Produit 5
+            |   :
+            a(data-toggle='modal', data-target='#modalCBlancPTrois')
+              img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
+              +fiche-produit('Http//:www.google.com', 1, 'chocolat noir1','content p','ingredients','content p4','modalCBlancPTrois')
+          .col-xs-4
+            h2.text Produit 6
+            |   :
+            a(data-toggle='modal', data-target='#modalCBlancPTrois2')
+              img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
+              +fiche-produit('Http//:www.google.com', 2, 'chocolat blanc','content p1','ingredients','content p2','modalCBlancPTrois2')
     // CHOCOLAT LAIT
-    section#chocolatLait
-      +block-product('nos chocolats laits')
-    // SECTION CHOCOLATS MIX
-    section#chocolatMix
-     +block-product('nos chocolats mix')
+    //
+      section#chocolatLait
+        +block-product('nos chocolats laits')
+      // SECTION CHOCOLATS MIX
+      section#chocolatMix
+       +block-product('nos chocolats mix')
 
 
 

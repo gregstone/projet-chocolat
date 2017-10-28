@@ -1,32 +1,18 @@
-include mixins-fp
-mixin block-product(titre)
-    .container-fluid
-        .row
-          .text-center
-            h2.titreSection=titre
-        .row
-          .col-xs-4
-            h2 Produit 1
-            img(src='http://via.placeholder.com/300x300', alt='')
-          .col-xs-4
-            h2 Produit 2
-            img.img-responsive(src='http://via.placeholder.com/300x300', alt='')
-          .col-xs-4
-            h2.text Produit 3
-            img(src='http://via.placeholder.com/300x300', alt='')
-        .row
-          .col-xs-4
-            h2 Produit 4
-            img(src='http://via.placeholder.com/300x300', alt='')
-          .col-xs-4
-            h2.text Produit 5
-            |   :
-            a(data-toggle='modal', data-target='#modalCBlancPTrois')
-              img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
-              +fiche-produit('Http//:www.google.com', 1, 'chocolat blanc','content p','ingredients','content p4')
-          .col-xs-4
-            h2.text Produit 6
-            |   :
-            a(data-toggle='modal', data-target='#modalCBlancPTrois')
-              img(src='image/_section-produits/produit2.jpg', alt='', style='width: 300px; height: 300px;')
-              +fiche-produit('Http//:www.google.com', 2, 'chocolat blanc','content p1','ingredients','content p2')
+mixin fiche-produit(imageLink, imageID, title, paragraphe1, title2, paragraphe2, id)
+  article
+      // FICHE PRODUIT MODAL BOOTSTRAP
+      .modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel' id=id)
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body.text-center
+              img(src="#{imageLink}#{imageID}")
+              div
+                h2=title
+                p=paragraphe1
+                h2=title2
+                p=paragraphe2
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Close

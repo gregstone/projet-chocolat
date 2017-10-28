@@ -10,9 +10,9 @@ mixin fiche-produit(imageLink, imageID, title, paragraphe1, title2, paragraphe2)
             .modal-body.text-center
               img(src="#{imageLink}#{imageID}")
               div
-                h2 #{title}
-                p #{paragraphe1}
-                h2 #{title2}
-                p #{paragraphe2}
+                h2=title
+                p=paragraphe1
+                h2=title2
+                p=paragraphe2
             .modal-footer
               button.btn.btn-default(type='button', data-dismiss='modal') Close
