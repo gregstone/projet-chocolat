@@ -36,45 +36,51 @@
 			<!-- BARRE DE NAVIGATION -->
 			<nav id="navbar" class="navbar navbar-toggleable-md navbar-light bg-faded">
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav text-center">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="produits.html">Nos produits</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="recettes.html">Nos recettes</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<div class="logo-navbar"></div>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html#ateliers">Nos ateliers</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html#localisation">Nous trouver</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">&#9670;</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Nous contacter</a>
-						</li>
-					</ul>
+
+					
+
+					  <ul class="navbar-nav text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pageProduits.html">Nos produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recettes.html">Nos recettes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <div class="logo-navbar"><a href="index.html"></a></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link sliding-link" href="index.html#goto-atelier">Nos ateliers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sliding-link" href="index.html#goto-noustrouver">Nous trouver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">&#9670;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Nous contacter</a>
+                    </li>
+                </ul>
+
 				</div>
 				<div class="social">
 					<ul class="item-social">
@@ -85,6 +91,34 @@
 				</div>
 			</nav>
 		</header>
+
+
+
+
+<!-- BURGER MENU -->
+  <div class="header-burger">
+    <div class="burger-container">
+      <div id="burger">
+        <div class="bar topBar"></div>
+        <div class="bar btmBar"></div>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="menu-item"><a href="index.html">Accueil</a></li>
+      <li class="menu-item"><a href="pageProduits.html">Nos produits</a></li>
+      <li class="menu-item"><a href="recettes.html">Nos recettes</a></li>
+      <li class="menu-item"><a href="#">Nos ateliers</a></li>
+      <li class="menu-item"><a href="#">Nous trouver</a></li>
+      <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+    
+
 
   <section id="contact">
 
@@ -166,14 +200,16 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="exampleSelect1">Sélectionner votre sujet *</label>
-										<select id="exampleSelect1" class="form-control">
+
+										<select id="exampleSelect1" class="form-control" name="subject">
 											<option></option>
-											<option>Inscription atelier</option>
-											<option>Démarche éco-responsable</option>
-											<option>Recettes</option>
-											<option>Prix</option>
-											<option>Horaires</option>
-											<option>Autre</option>
+											<option value="Inscription">Inscription atelier</option>
+											<option value="Démarche éco-responsable">Démarche éco-responsable</option>
+											<option value="Recettes">Recettes</option>
+											<option value="Prix">Prix</option>
+											<option value="Horaires">Horaires</option>
+											<option value="Autres">Autre</option>
+
 										</select>
 								</div>
 							</div>

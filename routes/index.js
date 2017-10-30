@@ -1,62 +1,79 @@
 var express = require('express');
 var router = express.Router();
 
-//connexion mysql (var connection)
 
-/**
-var connection = mysql.createConnection({
-  host     : 'localhost',
-	user     : 'root',
-	password : 'root',
-	database : 'groupe1'
-});
-**/
+// permet le fonctionnement de l'envoi de mails
+const nodemailer = require("nodemailer");
+var path = require('path');
+
+
+/* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-const products = [
-{id:1,titre:"produit 1", description: "description de produit1", prix:2},
-{id:2,titre:"produit 2", description: "description de produit2", prix: 3},
-{id:3,titre:"produit 3", description: "description de produit3", prix: 30000}];
 
-router.get('/produit-:productID(\\d+)', function(req, res, next){
-	//connection.query('select * from products where id = ?', [req.params.productID],function(error, results){
-		res.render('produit', {
-			informations: products[req.params.productID]
-		});
-	//})
-	
-});
 
-router.get('/admin/produits', function(req, res, next){
-	res.render('admin-produit',{
-			informations: products
-		});
+
+
+
+// Configuration de l'envoi de mail 
+
+
+router.get('/contact', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../views/', 'contact.html'));
+ 
 });
 
 
-router.get('/produits', function(req, res, next){
-	//connection.query('select * from products',function(error, results){
-		// results = [ {titre: '', description: '', prix:''},{titre: '', description: '', prix:''} ]
-		res.render('produit', {
-			informations: products
-		});
-	//})
+
+
+router.post('/contact', function(req, res, next) {
+
+	// Configuration du SMTP avec Mailtrap   
+	var transport = nodemailer.createTransport({
+	  host: "smtp.mailtrap.io",
+	  port: 2525,
+	  auth: {
+	    user: "69f91feb50f9b3",
+	    pass: "166ba62f4fd166"
+	  }
+	});
+
+	// Caracteristiques du message à envoyer 
+	console.log(req.body);
+	transport.sendMail({
+	    from: "f4456f26df-5118cc@inbox.mailtrap.io", // Expediteur --> ici adresse fournit par mailtrap 
+	    to: "f4456f26df-5118cc@inbox.mailtrap.io", // Destinataires
+	    subject: req.body.subject, // Objet du mail 
+	    text: 	'prenom: ' + req.body.name+ ' ' 
+	    		+' nom: '+req.body.surname+' '
+	    		+' email: '+req.body.email+' '
+	    		+' phone: '+req.body.phone+' '
+	    		+' adress: '+req.body.adress+' '
+	    		+' zip: '+req.body.zip+' '
+	    		+' city: '+req.body.city+' '
+	    		+' subject: '+req.body.subject+' '
+	    		+' message: '+req.body.message+' '		
+	       	
+	}, 
+
+	(error, response) => {
+	    if(error){
+	        console.log(error);
+	    }else{
+	        console.log("Message sent");
+	        res.redirect('/contact');
+	       
+	    }
+	});
+  
+// GET page produits
+ router.get('/produits', function(req, res, next){
+		res.render('produit');
 });
 
-router.get('/admin/ajout-produit',function(req, res, next){
-	res.render('ajout-produit');
 });
-
-router.post('/admin/ajout-produit', function(req, res, next){
-
-});
-
-router.get('/admin/edit-produit', function(req, res, next){
-	res.render('edit-produit');
-});
-
-
 
 module.exports = router;
