@@ -16,17 +16,13 @@ h1 {
 
 .burgercontainer {
     display: none;
-
-
 }
-
-
 
 header {
     z-index: 3;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     align-items: center;
 }
 
@@ -35,11 +31,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    width:100vw;
     height: 100px;
-    width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    height: 100px;
     -webkit-transition: height .5s, line-height .5s;
     /* Safari */
     transition: height .5s, line-height .5s, background-color 0.8s ease-out;
@@ -153,18 +148,27 @@ display : none ;
 
 
 .header-burger {
-display: none;
+  display: none;
+}
 
+
+.header-burger .menu {
+  display: none !important;
+}
+
+.header-burger.menu-opened .menu {
+  display: block !important;
 }
 
 
 /*------- SECTION ACCUEIL -------*/
 
 .bghomepage {
-    background-image: url(../image/_bg/bg-homepage.png);
+    background: url(../image/_bg/bg-homepage.png) black center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 1000px;
+    min-height: 550px;
    display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -175,7 +179,7 @@ display: none;
 .bghomepage-produits {
     background-image: url(../image/_background/chocolate1.jpg);
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: 1000px;
    display: -webkit-flex;
     display: flex;
@@ -192,11 +196,20 @@ display: none;
 
 }
 
+.items-home {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+
+
 .logohome{
-    width: 500px;
     height: 200px;
-    margin-left: 50%;
-    margin-right: 50%;
+    
 }
 
 /*------- SECTION PRODUITS -------*/
@@ -291,6 +304,10 @@ display: none;
     margin-bottom: 20px;
 }
 
+.containerSuggestions a {
+  color:black;
+}
+
 .suggestion img {
     width: 100%;
 }
@@ -320,7 +337,6 @@ display: none;
     z-index: 2;
     background-image: url(../image/_background/chocolate3.jpg);
     background-size: cover;
-    width: 100%;
     height:800px;
     display: -webkit-flex;
     display: flex;
@@ -350,7 +366,6 @@ display: none;
 .containerlabels {
     flex-wrap: wrap;
     margin: auto;
-    width: 100vw;
     min-height: 302px;
     display: flex;
     justify-content: space-around;
@@ -407,7 +422,6 @@ display: none;
 /*------- SECTION ATELIERS -------*/
 
 #ateliers .container-fluid {
-    width: 100%;
     height: 998px;
     background-image: url(../image/bkg_ateliers.png);
     background-attachment: fixed;
@@ -477,25 +491,11 @@ display: none;
 
 /*------- SECTION NOUS TROUVER -------*/
 
-#localisation {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
-}
-#localisation .container-fluid {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
-}
+
+
 
 #localisation h2 {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
     margin: 0px;
-    background: black;
     color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -503,17 +503,15 @@ display: none;
 
 #localisation iframe {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
 }
 
-.iframe {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+#localisation .iframe {
+    padding: 0;
 }
 
+#localisation .title {
+    background: black;
+}
 
 
 /*------- FOOTER -------*/
@@ -746,7 +744,7 @@ display:none;
   top: 0;
   left: 0;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   -webkit-transition: all 0.5s ease-out, background 1s ease-out;
@@ -780,7 +778,7 @@ display:none;
   top: 50%;
 }
  .header-burger .burger-container #burger .bar {
-  width: 100%;
+
   height: 1px;
   display: block;
   position: relative;
@@ -1033,21 +1031,19 @@ display:none;
     }
 }
 
-/* FOOTER */
 @media screen and (max-width: 767px) {
   #myFooter {
     text-align: center;
   }
-}
 
-/* PAGE CONTACT */
-@media screen and (max-width: 767px) {
   .bgcontact {
     background-size: cover;
     width: 100%;
     height: 400px;
   }
+
 }
+
 @media screen and (max-width: 800px) {
   .fa-angle-down {
     color: transparent;
@@ -1057,14 +1053,12 @@ display:none;
     padding-left: 0px;
     padding-right: 0px;
   }
-}
-@media screen and (max-width: 800px) {
+
   .btn-primary {
     margin-top: 15px;
     margin-left: 220px;
   }
-}
-@media screen and (max-width: 800px) {
+
   #contact p {
     text-align: center;
     padding-right: 220px;

@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1 ">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <!--À approfondir-->
     <meta name="author" content="name">
     <meta name="description" content="texte explicatif 150 caractères max">
@@ -33,11 +33,11 @@
 <body>
     <header>
        <!-- BARRE DE NAVIGATION -->
-        <nav id="navbar" class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <nav id="navbar" class="navbar navbar-toggleable-md navbar-light bg-faded col-xs-12">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil </a>
                     </li>
                     <li class="nav-item">
                         <a href="index.html">&#9670;</a>
@@ -49,7 +49,7 @@
                         <a class="nav-link" href="">&#9670;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="recettes.html">Nos recettes</a>
+                        <a class="nav-link" href="https://www.pinterest.fr/eplougoulm/-chocolat-en-joie-nos-recettes/">Nos recettes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">&#9670;</a>
@@ -89,23 +89,21 @@
 
 <!-- BURGER MENU -->
 
-  <div class="header-burger">
+<div class="header-burger">
     <div class="burger-container">
-      <div id="burger">
-        <div class="bar topBar"></div>
-        <div class="bar btmBar"></div>
-      </div>
+        <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+        </div>
     </div>
-    <ul class="menu">
-      <li class="menu-item"><a href="index.html">Accueil</a></li>
-      <li class="menu-item"><a href="pageProduits.html">Nos produits</a></li>
-      <li class="menu-item"><a href="recettes.html">Nos recettes</a></li>
-      <li class="menu-item"><a href="#">Nos ateliers</a></li>
-      <li class="menu-item"><a href="#">Nous trouver</a></li>
-      <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
+    <ul class="menu ">
+        <li class="menu-item"><a href="index.html">Accueil</a></li>
+        <li class="menu-item"><a href="pageProduits.html">Nos produits</a></li>
+        <li class="menu-item"><a href="recettes.html">Nos recettes</a></li>
+        <li class="menu-item"><a href="#">Nos ateliers</a></li>
+        <li class="menu-item"><a href="#">Nous trouver</a></li>
+        <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
     </ul>
-  </div>
-
 </div>
 
 
@@ -114,24 +112,27 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 text-center bghomepage">
-                    <div>
-                        <div>
-                        <div class="row items-home-1"> <img class="logohome" src="image/logo-white.svg" alt=""></div>
+                     <div class="col-sm-6 col-sm-offset-3"> 
+                        <div class="items-home-1">
+                             <img class="logohome img-responsive" src="image/logo-white.svg" alt="">
+                         </div>
                         <h2 class="items-home">“Une vie sans chocolat <br>est une vie à laquelle manque l'essentiel...”</h2>
-                        <div class="items-home"> <img src="image/_accueil/bienvenue-white.svg" alt=""></div>
+                        <div class="items-home"> 
+                            <img src="image/_accueil/bienvenue-white.svg" alt="">
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
 
 
     </section>
-   <!-- Section MISE EN AVANT DE PRODUITS -->
-	<section id="produits">
+
+
+    <!-- Section MISE EN AVANT DE PRODUITS -->
+	<section id="produits container-fluid">
 
 		<div class="color">
-
-		  	<div class="container-fluid">
+            <div class="container-fluid">
 		  		
 				<div class="wrapper">
 
@@ -260,14 +261,13 @@
                     </div>
 				</div> <!-- wrapper -->
 		
-			</div>
-		
+             </div> 
 		</div> <!-- color -->
   	
 
   	
 	</section>
-    <!-- Section DÉMARCHE ECO-RESPONSABLE-->
+    <!-- Section DÉMARCHE QUALITÉ-->
 
  <!-- 
    <section>
@@ -282,6 +282,7 @@
                 </div>
             </div>
         </div>  -->
+ 
 
 <section class="qualité container-fluid">
     <div class="row">  
@@ -324,7 +325,7 @@ avec ces cochonneries. Ah ça non!</p>
  
    
     <!-- Section Atelier-->
-    <section id="ateliers">
+    <!-- <section id="ateliers">
       <div id="goto-atelier"></div>
 		  <div class="container-fluid">
 
@@ -343,8 +344,9 @@ avec ces cochonneries. Ah ça non!</p>
         </div>
       </div>
     </section>
+    -->
 
-<!--
+
     <section id="ateliers">
       <div class="container-fluid" id="goto-atelier">
         <div class="row center-block">
@@ -359,29 +361,27 @@ avec ces cochonneries. Ah ça non!</p>
         </div>
       </div>
     </section>
--->
+
 
 
 <!-- Section NOUS TROUVER-->
 
 
-  <section id="localisation">
+  <section id="localisation" class=" container-fluid">
     <div id="goto-noustrouver"></div>
 
-		
-    <div class="container-fluid">
-      
+		      
       <div class="row">
-        <div class="col-xs-12 center-block text-center">
+        <div class="col-xs-12 center-block text-center title">
           <h2>Nous trouver</h2>
         </div>
       </div>
     
-<!-- API GOOGLE -->
+
 		<div class="row">
-			<div class="col-xs-12 center-block iframe">
+			<div class="col-xs-12 center-block iframe ">
 				<iframe
-					width="100%"
+					
 					height="300"
 					frameborder="0" style="border:0"
 					src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCrssm87fPaXFGodWXlx4ifBBvVUAn0Mc0&q=11+Rue+de+Poissy,Paris+France" allowfullscreen>
@@ -390,7 +390,7 @@ avec ces cochonneries. Ah ça non!</p>
 		</div>
 		
 		<div class="row">
-			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+			<div class="col-xs-12 col-md-4 col-lg-4 text-center">
 				<br>
 				<img src="image/iconLieu.png" alt="Icone adresse" class="img-responsive center-block" width="8%">
 				<br>
@@ -399,7 +399,7 @@ avec ces cochonneries. Ah ça non!</p>
 				<br>75005 PARIS
 				<br> Tel. : 06 45 67 76 58</p>
 			</div>
-			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+			<div class="col-xs-12 col-md-4 col-lg-4 text-center">
 				<br>
 				<img src="image/iconHoraires.png" alt="Icone horaires d'ouverture" class="img-responsive center-block" width="8%">
 				<br>
@@ -409,18 +409,17 @@ avec ces cochonneries. Ah ça non!</p>
 				<br>(sans interruption)</p>
 				<br>
 			</div>
-			<div class="col-xs-6 col-md-4 col-lg-4 text-center">
+			<div class="col-xs-12 col-md-4 col-lg-4 text-center">
 				<br>
 				<img src="image/iconMetro.png" alt="Icone du métro" class="img-responsive center-block" width="8%">
 				<br>
 				<p>Ligne 10 : Jussieu ou Maubert Mutualité
 				<br>Ligne 7 : Jussieu</p>
-			</div>				
-		</div>
+			</div>	
 	</section>
 
-
   <!-- Footer -->
+    
   <div class="content"></div>
   	<footer id="myFooter">
        <div class="container">
@@ -462,6 +461,7 @@ avec ces cochonneries. Ah ça non!</p>
             <p>© 2017 Chocolat en Joie</p>
         </div>
     </footer>
+    
 <!--/.Footer-->
 
 <!--Google analytic-->
@@ -484,7 +484,7 @@ avec ces cochonneries. Ah ça non!</p>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Global Javascript file -->
     <script src="js/script.js"></script>
-    <!-- Utilisation des coockies -->
+   Utilisation des coockies 
 	  <script src="js/cookiechoices.js"></script>
 	  <script>document.addEventListener ('DOMContentLoaded', function(event) {
 		cookieChoices.showCookieConsentBar ('En poursuivant votre navigation sur notre site, vous acceptez le dépôt de cookies qui nous permettront de vous proposer des contenus adaptés, d\’analyser le trafic et d\’effectuer des statistiques.', 'J\’accepte', 'En savoir plus', 'https://www.cnil.fr/fr');
