@@ -1,4 +1,5 @@
-mixin fiche-produit(imageLink, imageID, title, paragraphe1, title2, paragraphe2, id)
+mixin fiche-produit(imageLink, imageId, title, paragraphe1, title2, paragraphe2, id)
+  - var path = "/image/"
   article
       // FICHE PRODUIT MODAL BOOTSTRAP
       .modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel' id=id)
@@ -8,7 +9,7 @@ mixin fiche-produit(imageLink, imageID, title, paragraphe1, title2, paragraphe2,
               button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
             .modal-body.text-center
-              img(src="#{imageLink}#{imageID}")
+              img(src=path + imageLink, alt='#{imageId}')
               div
                 h2=title
                 p=paragraphe1

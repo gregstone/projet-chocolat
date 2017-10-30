@@ -735,3 +735,35 @@ nav.scroll .social {
     padding-right: 220px;
   }
 }
+
+
+
+/* CSS PAGE PRODUITS */
+.titrePageProduit{
+    font-size: 7em;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    border-bottom: 10px white double;
+    font-weight: bolder;
+    display: inline;
+    margin-bottom: 70px; 
+}
+
+.titreSection{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    border-bottom: 10px black double;
+    font-weight: bolder;
+    display: inline;
+    margin-top: 40px;
+}
+
+.sousTitreSection{
+    margin-top: 50px;
+}
+
+.marginTitreSection{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+

@@ -1,6 +1,6 @@
 .titrePageProduit{
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 2em;
     color: #fff;
     border-bottom: 10px white double;
     font-weight: bolder;
@@ -15,5 +15,7 @@
     display: inline;
     margin-top: 20px;
 }
+
+
 
 
