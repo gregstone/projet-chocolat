@@ -45,14 +45,14 @@ nav.scroll .social {
 }
 
 .logo-navbar {
-    background-image: url(../image/_navbar/logo-white.svg);
+    background-image: url(../images/_navbar/logo-white.svg);
     width: 129px;
     height: 30px;
 }
 
 
 nav.scroll .logo-navbar {
-    background-image: url(../image/_navbar/logo-black.svg);
+    background-image: url(../images/_navbar/logo-black.svg);
     width: 129px;
     height: 30px;
 }
@@ -164,7 +164,7 @@ display : none ;
 /*------- SECTION ACCUEIL -------*/
 
 .bghomepage {
-    background: url(../image/_bg/bg-homepage.png) black center center;
+    background: url(../images/_bg/bg-homepage.png) black center center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -177,7 +177,7 @@ display : none ;
 }
 
 .bghomepage-produits {
-    background-image: url(../image/_background/chocolate1.jpg);
+    background-image: url(../images/_background/chocolate1.jpg);
     background-size: cover;
     width: 100vw;
     height: 1000px;
@@ -335,7 +335,7 @@ display : none ;
 
 .qualité {
     z-index: 2;
-    background-image: url(../image/_background/chocolate3.jpg);
+    background-image: url(../images/_background/chocolate3.jpg);
     background-size: cover;
     height:800px;
     display: -webkit-flex;
@@ -357,7 +357,7 @@ display : none ;
     background: no-repeat;
     width: 464px;
     height: 200px;
-    background-image: url("../image/_section-demarche/notredemarche.svg");
+    background-image: url("../public/images/_section-demarche/notredemarche.svg");
     
 
 }
@@ -423,7 +423,7 @@ display : none ;
 
 #ateliers .container-fluid {
     height: 998px;
-    background-image: url(../image/bkg_ateliers.png);
+    background-image: url(../public/images/bkg_ateliers.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -629,7 +629,7 @@ display : none ;
 /*------- PAGE NOUS CONTACTER -------*/
 
 .bgcontact {
-    background-image: url(../image/_background/chocolate8.jpg);
+    background-image: url(../public/images/_background/chocolate8.jpg);
     background-size: cover;
     width: 100%;
     height: 768px;
@@ -687,7 +687,7 @@ display : none ;
 #pageJuridique {
     width: 100%;
     height: 100%;
-    background-image: url(../image/_background/chocolate12.jpg);
+    background-image: url(../public/images/_background/chocolate12.jpg);
     background-attachment: fixed;
     position: absolute;
     font-size: medium;

@@ -10,8 +10,21 @@ var path = require('path');
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  
+  res.render('index');
 });
+
+
+
+router.get('/juridique', function (req, res) {
+	res.render('juridique.pug');
+})
+
+router.get('/contact', function (req, res) {
+	res.render('contact.pug');
+})
+
+
 
 
 
@@ -22,7 +35,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/contact', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../views/', 'contact.html'));
+  res.sendFile(path.join(__dirname, '../views/', 'contact.pug'));
  
 });
 
@@ -69,11 +82,13 @@ router.post('/contact', function(req, res, next) {
 	    }
 	});
   
+
+});
+
 // GET page produits
  router.get('/produits', function(req, res, next){
 		res.render('produit');
 });
 
-});
 
 module.exports = router;
