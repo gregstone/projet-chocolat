@@ -41,14 +41,14 @@ nav.scroll .social {
 }
 
 .logo-navbar {
-    background-image: url(../image/_navbar/logo-white.svg);
+    background-image: url(../images/_navbar/logo-white.svg);
     width: 129px;
     height: 30px;
 }
 
 
 nav.scroll .logo-navbar {
-    background-image: url(../image/_navbar/logo-black.svg);
+    background-image: url(../images/_navbar/logo-black.svg);
     width: 129px;
     height: 30px;
 }
@@ -137,7 +137,7 @@ nav.scroll .social {
 /*------- SECTION ACCUEIL -------*/
 
 .bghomepage {
-    background-image: url(../image/_bg/bg-homepage.png);
+    background-image: url(../images/_bg/bg-homepage.png);
     background-size: cover;
     width: 100%;
     height: 1000px;
@@ -272,7 +272,7 @@ nav.scroll .social {
 
 .qualité {
     z-index: 2;
-    background-image: url(../image/_background/chocolate3.jpg);
+    background-image: url(../images/_background/chocolate3.jpg);
     background-size: cover;
     width: 100%;
     height:800px;
@@ -295,7 +295,7 @@ nav.scroll .social {
     background: no-repeat;
     width: 464px;
     height: 200px;
-    background-image: url("../image/_section-demarche/notredemarche.svg");
+    background-image: url("../images/_section-demarche/notredemarche.svg");
     
 
 }
@@ -317,7 +317,7 @@ nav.scroll .social {
     
     color: white;
     font-size: 26px;
-    justify-content: cneter;
+    justify-content: center;
 
 }
 
@@ -362,7 +362,7 @@ nav.scroll .social {
 #ateliers .container-fluid {
     width: 100%;
     height: 998px;
-    background-image: url(../image/bkg_ateliers.png);
+    background-image: url(../images/bkg_ateliers.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -584,7 +584,7 @@ nav.scroll .social {
 /*------- PAGE NOUS CONTACTER -------*/
 
 .bgcontact {
-    background-image: url(../image/_background/chocolate8.jpg);
+    background-image: url(../images/_background/chocolate8.jpg);
     background-size: cover;
     width: 100%;
     height: 768px;
@@ -642,7 +642,7 @@ nav.scroll .social {
 #pageJuridique {
     width: 100%;
     height: 100%;
-    background-image: url(../image/_background/chocolate12.jpg);
+    background-image: url(../images/_background/chocolate12.jpg);
     background-attachment: fixed;
     position: absolute;
     font-size: medium;
@@ -740,7 +740,7 @@ nav.scroll .social {
 
 /* CSS PAGE PRODUITS */
 .bgPageProduits {
-    background-image: url(../image/_background/chocolate1.jpg);
+    background-image: url(../images/_background/chocolate1.jpg);
     background-size: cover;
     width: 100%;
     height: 1000px;
