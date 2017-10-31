@@ -1,0 +1,6 @@
+each valeur in informations 
+	hr
+	p= valeur.titre
+	p= valeur.description
+	p= valeur.prix
+	a(href="/admin/edit-produit?id=" + valeur.id) Modifier
