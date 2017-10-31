@@ -1,15 +1,21 @@
 var express = require('express');
 var router = express.Router();
 
+
 // permet le fonctionnement de l'envoi de mails
 const nodemailer = require("nodemailer");
 var path = require('path');
 
 
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
+
+
+
 
 
 // Configuration de l'envoi de mail 
@@ -62,11 +68,12 @@ router.post('/contact', function(req, res, next) {
 	       
 	    }
 	});
-
+  
+// GET page produits
+ router.get('/produits', function(req, res, next){
+		res.render('produit');
 });
 
-
-
-
+});
 
 module.exports = router;
