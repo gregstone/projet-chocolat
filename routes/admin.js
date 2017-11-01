@@ -1,16 +1,49 @@
 var express = require('express');
 var router = express.Router();
+const mysql = require('mysql');
 
-// GET /admin/login
-router.get('/login', function(req, res){
-	// page de login (formulaire)
+const connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'jecode4wcs',
+	database : 'chocoenjoie'
 });
 
-// GET /admin/login
-router.post('/login', function(req, res){
+connection.connect();
+
+// GET /admin
+router.get('/', function(req, res){
+	// page de login (formulaire)
+	res.render('login');
+});
+
+// POST /admin/logged
+router.post('/', function(req, res){
 	// page de login 
 	// puis
-	// redirection vers /produits
+	// redirection vers /admin/logged (page d'accueil de l'espace admin)
+	let login = req.body.login;
+	let password= req.body.password;
+	connection.query('SELECT * FROM admin  WHERE login = "' + login + '" AND password = "' + password + '";', function (error, results, fields) {
+	  if (error) throw error;
+	  
+	  if (results.length === 0) {
+	  	res.send("Cet utilisateur n'existe pas");
+	  } else {
+	  	req.session.connected = true;
+	  	res.redirect('/admin/logged');
+	  }
+	});
+});
+
+// GET admin/logged
+router.get('/logged', function(req, res){
+	
+	if (req.session.connected){
+	 	res.render('admin');
+	} else {
+	 	res.redirect('/');
+	}
 });
 
 // GET /admin/produits
