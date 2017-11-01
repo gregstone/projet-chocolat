@@ -1,5 +1,15 @@
 var express = require('express');
 var router = express.Router();
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'jecode4wcs',
+	database : 'chocoenjoie'
+});
+
+connection.connect();
 
 
 // permet le fonctionnement de l'envoi de mails
