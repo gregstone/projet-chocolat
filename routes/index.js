@@ -1,5 +1,15 @@
 var express = require('express');
 var router = express.Router();
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'jecode4wcs',
+	database : 'chocoenjoie'
+});
+
+connection.connect();
 
 
 // permet le fonctionnement de l'envoi de mails
@@ -68,14 +78,15 @@ router.post('/contact', function(req, res, next) {
 	    from: "f4456f26df-5118cc@inbox.mailtrap.io", // Expediteur --> ici adresse fournit par mailtrap 
 	    to: "f4456f26df-5118cc@inbox.mailtrap.io", // Destinataires
 	    subject: req.body.subject, // Objet du mail 
-	    text: 	'prenom: ' + req.body.name+ ' ' 
-	    		+' nom: '+req.body.surname+' '
-	    		+' email: '+req.body.email+' '
-	    		+' phone: '+req.body.phone+' '
-	    		+' adress: '+req.body.adress+' '
-	    		+' zip: '+req.body.zip+' '
-	    		+' city: '+req.body.city+' '
-	    		+' subject: '+req.body.subject+' '
+	    text: 'Bonjour Mr Ducerf ' + req.body.name + ' ' + req.body.surname + ' visiteur de chocolat en joie.com viens de vous envoyer un nouveau formulaire de contact: ' + '\n' + '\n' 
+	    		+' prenom: ' + req.body.name+ ' ' + '\n'
+	    		+' nom: '+req.body.surname+' ' + '\n'
+	    		+' email: '+req.body.email+' ' + '\n'
+	    		+' phone: '+req.body.phone+' ' + '\n'
+	    		+' adress: '+req.body.adress+' ' + '\n'
+	    		+' zip: '+req.body.zip+' ' + '\n'
+	    		+' city: '+req.body.city+' ' + '\n'
+	    		+' subject: '+req.body.subject+' ' + '\n'
 	    		+' message: '+req.body.message+' '		
 	       	
 	}, 
