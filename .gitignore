@@ -1,5 +1,9 @@
 node_modules/
 design/
+config.js
+
+
+
 
 # Created by https://www.gitignore.io/api/osx,linux,windows,phpstorm,sublimetext
 
