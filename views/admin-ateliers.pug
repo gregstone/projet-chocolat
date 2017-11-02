@@ -1,0 +1,27 @@
+h1 Ici vous pouvez changer le nom, la date et l'image de la section Ateliers.
+
+a(href="/admin/create-product") Modifier l'évènement 
+
+br 
+br 
+
+table(border="1" width="100%")
+	tr
+		th #
+		th name 
+		th date
+		th image
+		th action
+	each res in results
+		tr
+			td=res.id
+			td=res.name
+			td=res.date 
+			td
+				img(src="/images/" + res.image height="50")
+			td 
+				a(href="/admin/delete-product?id=" + res.id) Supprimer
+
+
+
+
