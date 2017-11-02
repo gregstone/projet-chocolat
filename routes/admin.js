@@ -6,12 +6,23 @@ router.get('/login', function(req, res){
 	// page de login (formulaire)
 });
 
-// GET /admin/login
+
+// POST /admin/login
 router.post('/login', function(req, res){
 	// page de login 
 	// puis
 	// redirection vers /produits
 });
+
+
+// GET /SESSION OUVERTE
+router.get('/login', function(req, res){
+	
+});
+
+
+
+
 
 // GET /admin/produits
 router.get('/produits', function(req, res){

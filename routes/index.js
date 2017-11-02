@@ -7,24 +7,29 @@ const nodemailer = require("nodemailer");
 var path = require('path');
 
 
-/* GET home page. */
+/* GET index*/
 
 router.get('/', function(req, res, next) {
   
   res.render('index');
 });
 
-
+/* GET juridique*/
 
 router.get('/juridique', function (req, res) {
 	res.render('juridique.pug');
 })
 
+/* GET contact*/
 router.get('/contact', function (req, res) {
 	res.render('contact.pug');
 })
 
 
+// GET page produits
+ router.get('/produits', function(req, res, next){
+		res.render('produit');
+});
 
 
 
@@ -53,6 +58,9 @@ router.post('/contact', function(req, res, next) {
 	    pass: "166ba62f4fd166"
 	  }
 	});
+
+
+
 
 	// Caracteristiques du message à envoyer 
 	console.log(req.body);
@@ -85,10 +93,6 @@ router.post('/contact', function(req, res, next) {
 
 });
 
-// GET page produits
- router.get('/produits', function(req, res, next){
-		res.render('produit');
-});
 
 
 module.exports = router;
