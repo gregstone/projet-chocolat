@@ -121,17 +121,13 @@ router.post('/ateliers/modifier', function(req, res) {
     //} else {
     //res.send('Vous avez fait une erreur dans le téléchargement') }
 	console.log(req.body);
-    connection.query('INSERT INTO workshops VALUES (null, ?, ?,null )', [req.body.name, req.body.date], function (error, results, fields) {
+    connection.query('UPDATE workshops SET name = ?, date = ? WHERE id=1', [req.body.name, req.body.date], function (error, results, fields) {
         if (error) throw error;
         console.log(results);
         // connected!
         res.redirect('/admin/ateliers');
-
-
     });
 
-    // puis
-    // redirection vers /ateliers
 });
 
 // GET /admin/ateliers/modifier
