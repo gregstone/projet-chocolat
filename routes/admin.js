@@ -3,6 +3,10 @@ var router = express.Router();
 const mysql = require('mysql');
 const config = require('../config.js');
 const connection = mysql.createConnection(config);
+const multer = require('multer');
+const fs = require('fs');
+const upload = multer({ dest: 'tmp/' });
+
 
 connection.connect();
 
@@ -129,6 +133,31 @@ router.post('/ateliers/modifier', function(req, res) {
     });
 
 });
+
+
+// POST /admin/new-background
+router.post('/new-background', upload.single('new-background'), function(req, res) {
+	console.log(req.file);
+fs.rename(req.file.path,'public/images/background3.png');
+res.redirect('/admin/ateliers');
+});
+
+
+// POST /admin/new-background
+router.post('/new-background', upload.single('new-background'), function(req, res) {
+	console.log(req.file);
+fs.rename(req.file.path,'public/images/background3.png');
+res.redirect('/admin/ateliers');
+});
+
+
+
+
+
+
+
+
+
 
 // GET /admin/ateliers/modifier
 router.get('/ateliers/modifier/:id(\\d+)', function(req, res) {

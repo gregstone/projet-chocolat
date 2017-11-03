@@ -22,6 +22,35 @@ table(border="1" width="100%")
 			td 
 				a(href="/admin/delete-product?id=" + res.id) Supprimer
 
+br 
+br 
+
+table(border="1" width="100%")
+	tr
+		th #
+		th name 
+		th image
+		th action
+
+	each res in results
+		tr
+			td 1
+			td Image de fond section Ateliers
+			td
+				img(src="/images/background-atelier.png" height="100")
+			td 
+				// a(href="/admin/new-background?id=1") Nouveau background
+				// On est par défaut sur cette route /admin/ateliers
+				p Choisir une nouvelle image
+				form(method="POST" action="/admin/new-background" enctype='multipart/form-data') 
+					br
+					input(name="new-background" type="file" placeholder="")
+					button(type='submit') Valider	
+					br
+				br
+				a(href="/admin/default-background?id=1") Image par défaut
+
+
 
 
 
