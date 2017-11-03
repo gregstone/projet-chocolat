@@ -33,7 +33,7 @@ router.get('/contact', function (req, res) {
 
 // GET page produits
  router.get('/produits', function(req, res, next){
-		res.render('produit');
+		res.render('produit.pug');
 });
 
 
