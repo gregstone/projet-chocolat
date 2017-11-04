@@ -5,6 +5,11 @@ const config = require('../config.js');
 const connection = mysql.createConnection(config);
 const multer = require('multer');
 const fs = require('fs');
+const fscopyfile = require('fs-copy-file');
+console.log(fscopyfile);
+console.log(fs);
+console.log(fscopyfile.Function);
+const { COPYFILE_EXCL } = fs.constants;
 const upload = multer({ dest: 'tmp/' });
 
 
@@ -143,10 +148,11 @@ res.redirect('/admin/ateliers');
 });
 
 
-// POST /admin/new-background
-router.post('/new-background', upload.single('new-background'), function(req, res) {
-	console.log(req.file);
-fs.rename(req.file.path,'public/images/background3.png');
+// GET /admin/default-background
+router.get('/default-background3',function(req, res) {
+	
+fs.rename('public/images/default-background/background3.png', 'public/images/background3.png') ;
+//, COPYFILE_EXCL, (err) => {if (err) console.log(err);}
 res.redirect('/admin/ateliers');
 });
 
