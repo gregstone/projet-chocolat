@@ -1,6 +1,26 @@
-each valeur in informations 
-	hr
-	p= valeur.titre
-	p= valeur.description
-	p= valeur.prix
-	a(href="/admin/edit-produit?id=" + valeur.id) Modifier
+a(href="/admin/produits/ajouter") Ajouter
+
+
+table(border="1" width="100%")
+	tr
+		th id
+		th categorie 
+		th nom
+		th description
+		th composition
+		th quantité
+		th poids
+		th image
+	each valeur in informations
+		tr
+			td=valeur.id
+			td=valeur.name
+			td=valeur.description 
+			td=valeur.composition
+			td=valeur.quantity
+			td=valeur.weight
+			td
+				img(src="/images/" + valeur.image height="50")
+			td 
+				a(href="/admin/delete-product?id=" + valeur.id) Supprimer
+				a(href="/admin/edit-produit?id=" + valeur.id) Modifier

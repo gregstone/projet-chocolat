@@ -55,26 +55,53 @@ router.get('/logged', function(req, res) {
 
 // GET /SESSION OUVERTE
 router.get('/login', function(req, res) {
-
 });
 
 
 // GET /admin/produits
 router.get('/produits', function(req, res) {
     // liste des produits
+    connection.query('SELECT * FROM products', function (error, results, fields) {
+        if (error) throw error;
+        // connected!
+        res.render('admin-produit', {
+            informations: results
+        });
+    });
 });
 
 // GET /admin/produits/ajouter
-router.get('/produits/ajouter', function(req, res) {
+router.get('/produits/ajouter', function(req, res){
     // ajouter des produits (formulaire)
+    res.render('ajout-produit');
 });
 
 
 // POST /admin/produits/ajouter
-router.post('/produits/ajouter', function(req, res) {
+router.post('/produits/ajouter', upload.single('image'), function(req, res, next){
     // ajouter des produits
     // puis
     // redirection vers /produits
+    //if(req.file){ // si req.file existe
+
+    console.log(req.body);
+    if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg') ) {
+        fs.rename(req.file.path,'public/images/'+req.file.originalname);
+    } else {
+        res.send('Vous avez fait une erreur dans le téléchargement')
+    }
+    
+    connection.query('INSERT INTO products VALUES (null, ?, ?, ?, ?, ?, ?, ?)',
+    [req.body.category,req.body.name, req.body.description, req.body.composition, req.body.quantity, req.body.weight, req.file.originalname],
+    function (error, results, fields) {
+        if (error) throw error;
+        // connected!
+        //res.render('admin-index', results);
+        console.log(results);
+        res.redirect('/admin/produits');
+        
+    }); 
+    
 });
 
 // GET /admin/produits/modifier
