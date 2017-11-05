@@ -1,54 +1,69 @@
-h2 Bonjour M. Ducerf, cette page vous permet de modifier, le nom, la date et l'image de fond de vos ateliers.  
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
 
-a(href="/admin/ateliers/modifier") Modifier l'évènement 
+nav.navbar.navbar-inverse.bg-inverse
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='/') Chocolat En Joie
+    ul.nav.navbar-nav
+      li
+        a(href='/admin/logged') Accueil
+      li
+        a(href='/admin/produits') Produits
+      li.active
+        a(href='/admin/ateliers') Ateliers
 
-br 
-br 
 
-table(border="1" width="100%")
-	tr
-		th #
-		th name 
-		th date
-		th image
-		th action
-	each res in results
-		tr
-			td=res.id
-			td=res.name
-			td=res.date 
-			td
-				img(src="/images/" + res.image height="50")
-			td 
-				a(href="/admin/delete-product?id=" + res.id) Supprimer
+h3.text-center Cette section vous permet de modifier, le nom, la date et l'image de fond de vos ateliers.  
+
+a(href="/admin/ateliers/modifier" class="btn btn-info") Modifier l'évènement 
 
 br 
 br 
 
 table(border="1" width="100%")
-	tr
-		th #
-		th name 
-		th image
-		th action
+    tr
+        th #
+        th name 
+        th date
+        th image
+        th action
+    each res in results
+        tr
+            td=res.id
+            td=res.name
+            td=res.date 
+            td
+                img(src="/images/" + res.image height="50")
+            td 
+                a(href="/admin/delete-product?id=" + res.id) Supprimer
 
-	each res in results
-		tr
-			td 1
-			td Image de fond section Ateliers
-			td
-				img(src="/images/background3.png" height="100")
-			td 
-				// a(href="/admin/new-background?id=1") Nouveau background
-				// On est par défaut sur cette route /admin/ateliers
-				p Choisir une nouvelle image
-				form(method="POST" action="/admin/new-background" enctype='multipart/form-data') 
-					br
-					input(name="new-background" type="file" placeholder="")
-					button(type='submit') Valider	
-					br
-				br
-				a(href="/admin/default-background3") Image par défaut
+br 
+br 
+
+table(border="1" width="100%")
+    tr
+        th #
+        th name 
+        th image
+        th action
+
+    each res in results
+        tr
+            td 1
+            td Image de fond section Ateliers
+            td
+                img(src="/images/background3.png" height="100")
+            td 
+                // a(href="/admin/new-background?id=1") Nouveau background
+                // On est par défaut sur cette route /admin/ateliers
+                p Choisir une nouvelle image
+                form(method="POST" action="/admin/new-background" enctype='multipart/form-data') 
+                    br
+                    input(name="new-background" type="file" placeholder="")
+                    button(type='submit') Valider   
+                    br
+                br
+                a(href="/admin/default-background3") Image par défaut
 
 
 

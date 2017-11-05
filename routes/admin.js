@@ -107,20 +107,36 @@ router.post('/produits/ajouter', upload.single('image'), function(req, res, next
 // GET /admin/produits/modifier
 router.get('/produits/modifier/:id(\\d+)', function(req, res) { // req.params.id 
     // modifier des produits (formulaire)
+    res.render('admin-produit-modifier');
 });
 
 // POST /admin/produits/modifier
 router.post('/produits/modifier/:id(\\d+)', function(req, res) {
-    // modifier des produits
-    // puis
-    // redirection vers /produits
+
+    console.log(req.body);
+    connection.query('UPDATE products SET category= ?, name= ?, description= ?, composition= ?, quantity= ?, weight= ?, image= ? WHERE id=?', [req.body.category, req.body.name, req.body.description, req.body.composition, req.body.quantity, req.body.weight, req.body.image, req.params.id], function (error, results, fields) {
+        if (error) throw error;
+        console.log(results);
+        // connected!
+        res.redirect('/admin/produits');
+    });
+
 });
+
 
 // GET /admin/produits/supprimer
 router.get('/produits/supprimer/:id(\\d+)', function(req, res) {
     // supprimer des produits
     // puis
     // redirection vers /produits
+    connection.query('DELETE FROM products WHERE id=?', [req.params.id], function (error, results) {
+        if (error) { 
+            console.log(error);
+        } else {
+            res.redirect('/admin/produits');
+        }
+    });
+        
 });
 
 

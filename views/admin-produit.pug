@@ -1,26 +1,48 @@
-a(href="/admin/produits/ajouter") Ajouter
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
 
+nav.navbar.navbar-inverse.bg-inverse
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='/') Chocolat En Joie
+    ul.nav.navbar-nav
+      li
+        a(href='/admin/logged') Accueil
+      li.active
+        a(href='/admin/produits') Produits
+      li
+        a(href='/admin/ateliers') Ateliers
+
+
+h4.text-center="Cette section vous permet de visualiser l\'ensemble des produits présents sur le site. a l'aide des boutons appropriés vous pouvez ajouter, modifier ou supprimer des produits à volonté"  
+br
+a(href="/admin/produits/ajouter" class="btn btn-success btn-block" data-toggle="tooltip" data-placement="right" title="Ajouter une fiche produit" style="width:50%" class="center-block") Ajouter
+br
+br
 
 table(border="1" width="100%")
-	tr
-		th id
-		th categorie 
-		th nom
-		th description
-		th composition
-		th quantité
-		th poids
-		th image
-	each valeur in informations
-		tr
-			td=valeur.id
-			td=valeur.name
-			td=valeur.description 
-			td=valeur.composition
-			td=valeur.quantity
-			td=valeur.weight
-			td
-				img(src="/images/" + valeur.image height="50")
-			td 
-				a(href="/admin/delete-product?id=" + valeur.id) Supprimer
-				a(href="/admin/edit-produit?id=" + valeur.id) Modifier
+    tr
+        th id
+        th categorie 
+        th nom
+        th description
+        th composition
+        th quantité
+        th poids
+        th image
+        th action
+    each valeur in informations
+        tr
+            td=valeur.id
+            td=valeur.category
+            td=valeur.name
+            td=valeur.description 
+            td=valeur.composition
+            td=valeur.quantity
+            td=valeur.weight
+            td
+                img(src="/images/" + valeur.image height="50")
+            td 
+                a(href='/admin/produits/modifier/' + valeur.id, class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Modifier la fiche produit") Modifier
+                a(href='/admin/produits/supprimer/'+valeur.id, class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Supprimer la fiche produit") Supprimer
+br
+a(href="/admin/produits/ajouter" class="btn btn-success btn-block" data-toggle="tooltip" data-placement="right" title="Ajouter une fiche produit" style="width:50%" class="center-block") Ajouter

@@ -1,12 +1,12 @@
 link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
 
-nav.navbar.navbar-default
+nav.navbar.navbar-inverse.bg-inverse
   .container-fluid
     .navbar-header
-      a.navbar-brand(href='./logged') Chocolat En Joie
+      a.navbar-brand(href='/') Chocolat En Joie
     ul.nav.navbar-nav
       li.active
-        a(href='/') Accueil
+        a(href='/admin/logged') Accueil
       li
         a(href='/admin/produits') Produits
       li
@@ -15,8 +15,10 @@ nav.navbar.navbar-default
 
 
 
-h2 Bonjour Mr Ducerf, bienvenue dans l'espace d'aministration de chocolat en Joie.com. 
-h4 Cette espace vous offre la possibilité:
+h2.text-center Bonjour Mr Ducerf, bienvenue dans l'espace d'aministration de chocolat en Joie.com.
+br 
+h4.text-left(style="margin-left:20px;") Cette espace vous offre la possibilité:
     ul
         li d'ajouter, modifier, supprimer des produits (page produits)
         li d'ajouter, modifier, supprimer des ateliers (section ateliers de la page d'accueil)
+img.img-responsive.center-block(src='/images/_à trier/110829070555_1_900x600.jpg' alt='')
