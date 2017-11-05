@@ -6,9 +6,9 @@ const connection = mysql.createConnection(config);
 const multer = require('multer');
 const fs = require('fs');
 const fscopyfile = require('fs-copy-file');
-console.log(fscopyfile);
-console.log(fs);
-console.log(fscopyfile.Function);
+//console.log(fscopyfile);
+//console.log(fs);
+//console.log(fscopyfile.Function);
 const { COPYFILE_EXCL } = fs.constants;
 const upload = multer({ dest: 'tmp/' });
 
@@ -24,7 +24,6 @@ router.get('/', function(req, res) {
 
 // POST /admin/login
 router.post('/', function(req, res) {
-
     // page de login 
     // puis
     // redirection vers /admin/logged (page d'accueil de l'espace admin)
@@ -44,7 +43,6 @@ router.post('/', function(req, res) {
 
 // GET admin/logged
 router.get('/logged', function(req, res) {
-
     if (req.session.connected) {
         res.render('admin');
     } else {
@@ -60,40 +58,80 @@ router.get('/login', function(req, res) {
 
 
 // GET /admin/produits
-router.get('/produits', function(req, res) {
-    // liste des produits
-});
-
-// GET /admin/produits/ajouter
-router.get('/produits/ajouter', function(req, res) {
-    // ajouter des produits (formulaire)
-});
-
-
-// POST /admin/produits/ajouter
-router.post('/produits/ajouter', function(req, res) {
-    // ajouter des produits
-    // puis
-    // redirection vers /produits
+router.get('/produits', function(req, res, next) {
+    connection.query('SELECT * FROM products', function(error, results) {  // pour se relier à la table mysql
+        if (error) {
+            console.log(error);
+        }
+        res.render('admin-produit', {  // affiche la page admin-produit.pug
+            products : results  // renvoie les résultats de la BDD sur la page. "product" est la variable utilisée ds le fichier admin-produit.pug
+        });
+    });
 });
 
 // GET /admin/produits/modifier
-router.get('/produits/modifier/:id(\\d+)', function(req, res) { // req.params.id 
-    // modifier des produits (formulaire)
+router.get('/produits/modifier/:id(\\d+)', function(req, res, next) {
+    // Afichage de l'article à modifier
+    connection.query('SELECT * FROM products WHERE id = ?', [req.params.id], function(error, results) {
+        res.render('admin-produit-modifier', {   // on appelle la page admin-produit-modifier.pug
+            product: results[0]  // affiche la page admin-produit-modifier.pug
+        });
+    });
 });
-
 // POST /admin/produits/modifier
-router.post('/produits/modifier/:id(\\d+)', function(req, res) {
-    // modifier des produits
-    // puis
-    // redirection vers /produits
+router.post('/produits/modifier/:id(\\d+)', upload.single('image'), function(req, res, next) {
+    console.log(req.body);
+    if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg') ) {
+        fs.rename(req.file.path,'public/images/'+req.file.originalname);
+    } else {
+        res.send('Vous avez fait une erreur dans le téléchargement')
+    }
+    // Modification de l'article
+    connection.query('UPDATE products SET category=?,name=?,description=?,composition=?,quantity=?,weight=?, image=? WHERE id = ?',
+        [req.body.category,req.body.name,req.body.description,req.body.composition,req.body.quantity,req.body.weight, req.file.originalname, req.params.id],
+        function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            // Redirection vers /admin/produits
+            res.redirect('/admin/produits');
+        }
+    });
 });
 
-// GET /admin/produits/supprimer
-router.get('/produits/supprimer/:id(\\d+)', function(req, res) {
-    // supprimer des produits
-    // puis
-    // redirection vers /produits
+// GET /admin/produits/ajouter
+router.get('/produits/ajouter', function(req, res){
+    // ajouter des produits (formulaire)
+    res.render('admin-produit-ajouter');
+});
+// POST /admin/produits/ajouter
+router.post('/produits/ajouter', upload.single('image'), function(req, res, next){
+    console.log(req.body);
+    if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg') ) {
+        fs.rename(req.file.path,'public/images/'+req.file.originalname);
+    } else {
+        res.send('Vous avez fait une erreur dans le téléchargement')
+    }
+    connection.query('INSERT INTO products VALUES (null, ?, ?, ?, ?, ?, ?, ?)',
+    [req.body.category,req.body.name, req.body.description, req.body.composition, req.body.quantity, req.body.weight, req.file.originalname],
+    function (error, results, fields) {
+        if (error) throw error;
+        // connected!
+        //res.render('admin-index', results);
+        console.log(results);
+        res.redirect('/admin/produits');
+    });
+});
+
+// GET /admin//produits/supprimer
+router.get('/produits/supprimer/:id(\\d+)', function(req, res, next) {
+    connection.query('DELETE FROM products WHERE id = ?', [req.params.id], function(error) {
+        if (error) {
+            console.log(error);
+        } else {
+        res.redirect('/admin/produits');
+        }
+    });
 });
 
 

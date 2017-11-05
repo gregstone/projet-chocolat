@@ -1,0 +1,41 @@
+extends layoutAdmin
+block content
+    h2 Cette page vous permet d'ajouter un produit avec une photo.  
+    ul.pager.col-lg-12
+      li.previous
+        a(href='/admin/produits')
+          span.glyphicon.glyphicon-backward
+          |  Retour produits
+    br 
+    br
+    br
+    form(method="POST" enctype="multipart/form-data")
+        .form-group
+        label(for='exampleSelect1') Sélectionner la catégorie du produit :
+        br
+        select(name="category" type="text")
+          option Catégorie
+          option(value='chocolat noir') Chocolat noir
+          option(value='chocolat blanc') Chocolat blanc
+          option(value='chocolat lait') Chocolat lait
+          option(value='chocolat mix') Chocolat mix
+        .form-group
+        label(for='name') Nom du produit
+        input#title.form-control(type='text' placeholder='Nom du produit' name="name")
+        .form-group
+        label(for='description') Description
+        textarea#text.form-control(placeholder='Description' name="description")
+        .form-group
+        label(for='composition') Composition
+        textarea#text.form-control(placeholder='Composition' name="composition")
+        .form-group
+        label(for='quantity') Quantité
+        input#title.form-control(type='text' placeholder='Quantité' name="quantity")
+        .form-group
+        label(for='weight') Poids
+        input#title.form-control(type='text' placeholder='Poids' name="weight")
+        .form-group
+        label(for='exampleInputFile') Téléchargement de photo inférieure à 3Go et de format jpg ou png
+        input#file.form-control(type='file' placeholder='image' name="image")
+        br
+        button.btn.btn-success(type='submit') Enregistrer
