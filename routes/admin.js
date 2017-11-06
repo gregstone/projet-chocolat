@@ -50,7 +50,6 @@ router.get('/logged', function(req, res) {
     }
 });
 
-
 // GET /SESSION OUVERTE
 router.get('/login', function(req, res) {
 
