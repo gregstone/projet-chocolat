@@ -1,17 +1,85 @@
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+
+// jQuery
+script(type='text/javascript', src='https://code.jquery.com/jquery-1.11.3.min.js')
+// Bootstrap Date-Picker Plugin
+script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js')
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css')
+
+
+nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='./logged') Chocolat En Joie
+    ul.nav.navbar-nav
+      li.active
+        a(href='./logged') Accueil
+      li
+        a(href='./produits') Produits
+      li
+        a(href='./ateliers') Ateliers
+
+
 
 h2 Placer ici votre texte et votre image pour modifer l'évènement
 form(method="POST")
-	br
-	br
-	input(name="name" type="text" placeholder="Nom de l'évènement" required='required')
-	br
-	br
-	textarea(name="date" type="date" placeholder="yyyy-mm-dd" required='required')
-	br
-	br
-	br
-	br
-	button(type='submit') Enregistrer
+    br
+    br
+    input(name="name" type="text" placeholder="Nom de l'évènement" required='required')
+    br
+    br
+    textarea(name="date" type="date" placeholder="yyyy-mm-dd" required='required')
+    br
+    br
+    br
+    br
+    button(type='submit') Enregistrer
+
+
+.bootstrap-iso
+  .container-fluid
+    .row
+      .col-md-6.col-sm-6.col-xs-12
+        // Form code begins
+        form(method='post')
+          .form-group
+            // Date input
+            label.control-label(for='date') Nom de l'évènement
+            input#date.form-control(name='name', placeholder='Nom de l evenement',required='required' type='text')
+            // Date input
+            label.control-label(for='date') Date
+            input#date.form-control(name='date', placeholder='MM/DD/YYY', type='text')    
+          .form-group
+            // Submit button
+            button.btn.btn-primary(name='submit', type='submit') Submit
+        // Form code ends
+
+
+
+script.
+  $(document).ready(function(){
+  var date_input=$('input[name="date"]'); //our date input has the name "date"
+  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+  var options={
+  format: 'mm/dd/yyyy',
+  container: container,
+  todayHighlight: true,
+  autoclose: true,
+  };
+  date_input.datepicker(options);
+  })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
