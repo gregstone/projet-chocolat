@@ -3,14 +3,14 @@ link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css
 nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      a.navbar-brand(href='./logged') Chocolat En Joie
+      a.navbar-brand(href='/logout') Chocolat En Joie
     ul.nav.navbar-nav
       li.active
-        a(href='./logged') Accueil
+        a(href='/admin') Accueil
       li
-        a(href='./produits') Produits
+        a(href='/admin/produits') Produits
       li
-        a(href='./ateliers') Ateliers
+        a(href='/admin/ateliers') Ateliers
 
 
 
@@ -21,14 +21,15 @@ nav.navbar.navbar-inverse
           | Bonjour Mr Ducerf, bienvenue sur la page d'aministration de votre site chocolatenjoie.com
         p Cette espace vous offre la possibilité de supprimer, modifer et même d'ajouter des :
         p
-          a.btn.btn-primary.btn-lg(role='button' href='./produits')
+          a.btn.btn-primary.btn-lg(role='button' href='/admin/produits')
             | produits  
             span.glyphicon.glyphicon.glyphicon-hand-right
         p
-          a.btn.btn-primary.btn-lg(role='button' href='./ateliers')
+          a.btn.btn-primary.btn-lg(role='button' href='/admin/ateliers')
             | ateliers  
             span.glyphicon.glyphicon.glyphicon-hand-right
         p
-        p Et si vous souhaitez revenir sur votre site, c'est par ici  
+        p Et si vous souhaitez juste revenir sur votre site, c'est par ici  
           span.glyphicon.glyphicon.glyphicon-hand-right
-          a(href="/" class="btn btn-info") chocolatenjoie.com
+          a(href="/logout" class="btn btn-info") chocolatenjoie.com
+        

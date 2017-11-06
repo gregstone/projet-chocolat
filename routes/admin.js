@@ -18,42 +18,9 @@ connection.connect();
 // GET /admin
 router.get('/', function(req, res) {
     // page de login (formulaire)
-    res.render('login');
+    res.render('admin');
 });
 
-
-// POST /admin login
-router.post('/', function(req, res) {
-    // page de login 
-    // puis
-    // redirection vers /admin/logged (page d'accueil de l'espace admin)
-    let login = req.body.login;
-    let password = req.body.password;
-    connection.query('SELECT * FROM admin  WHERE login = "' + login + '" AND password = "' + password + '";', function(error, results, fields) {
-        if (error) throw error;
-
-        if (results.length === 0) {
-            res.send("Cet utilisateur n'existe pas");
-        } else {
-            req.session.connected = true;
-            res.redirect('/admin/logged');
-        }
-    });
-});
-
-// GET admin/logged
-router.get('/logged', function(req, res) {
-    if (req.session.connected) {
-        res.render('admin');
-    } else {
-        res.redirect('/');
-    }
-});
-
-// GET /SESSION OUVERTE
-router.get('/login', function(req, res) {
-
-});
 
 
 // GET /admin/produits

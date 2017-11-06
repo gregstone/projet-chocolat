@@ -37,20 +37,51 @@ router.get('/contact', function (req, res) {
 });
 
 
+router.get('/login', function(req, res) {
+    // page de login (formulaire)
+    res.render('login');
+});
+// POST /admin (page d'affichage une fois le login et password validés)
+router.post('/login', function(req, res) {
+    // page de login 
+    // puis
+    // redirection vers /admin/logged (page d'accueil de l'espace admin)
+    let login = req.body.login;
+    let password = req.body.password;
+    connection.query('SELECT * FROM admin  WHERE login = "' + login + '" AND password = "' + password + '";', function(error, results, fields) {
+        if (error) throw error;
 
+        if (results.length === 0) {
+            res.send("Cet utilisateur n'existe pas");
+        } else {
+            req.session.connected = true;
+            req.session.cookie.maxAge = 36000; // 1 heure
+            res.redirect('/logged');
+        }
+    });
+});
 
+// GET admin/logged
+router.get('/logged', function(req, res) {
+    if (req.session.connected) {
+        res.redirect('/admin');
+    } else {
+        res.redirect('/');
+    }
+});
 
+// LOGOUT
+router.get('/logout', function(req, res) {
+	req.session.destroy(function() {
+		res.redirect('/');
+	});
+});
 
 // Configuration de l'envoi de mail 
-
-
 router.get('/contact', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../views/', 'contact.pug'));
  
 });
-
-
-
 
 router.post('/contact', function(req, res, next) {
 
@@ -63,9 +94,6 @@ router.post('/contact', function(req, res, next) {
 	    pass: "166ba62f4fd166"
 	  }
 	});
-
-
-
 
 	// Caracteristiques du message à envoyer 
 	console.log(req.body);
@@ -91,12 +119,9 @@ router.post('/contact', function(req, res, next) {
 	        console.log(error);
 	    }else{
 	        console.log("Message sent");
-	        res.redirect('/contact');
-	       
+	        res.redirect('/contact');  
 	    }
 	});
-  
-
 });
 
 //
@@ -109,8 +134,6 @@ router.get('/produits', function(req, res, next) {
 	  		informations: results
 	  	});
 	});
-
-
  });
 
 // page liste des produit chocolat noir

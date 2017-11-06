@@ -3,20 +3,24 @@ link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css
 nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      a.navbar-brand(href='./logged') Chocolat En Joie
+      a.navbar-brand(href='/logout') Chocolat En Joie
     ul.nav.navbar-nav
       li.active
-        a(href='./logged') Accueil
+        a(href='/admin') Accueil
       li
-        a(href='./produits') Produits
+        a(href='/admin/produits') Produits
       li
-        a(href='./ateliers') Ateliers
+        a(href='/admin/ateliers') Ateliers
+
 h2.text-center Cette page vous permet de modifier un produit.  
 ul.pager.col-lg-12
   li.previous
     a(href='/admin/produits')
       span.glyphicon.glyphicon-backward
       |  Retour produits
+br
+a(href="/logout" class="btn btn-danger") Déconnexion 
+br
 
 
 form(method="POST" enctype="multipart/form-data")

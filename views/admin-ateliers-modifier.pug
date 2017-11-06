@@ -10,18 +10,25 @@ link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-da
 nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      a.navbar-brand(href='./logged') Chocolat En Joie
+      a.navbar-brand(href='/logout') Chocolat En Joie
     ul.nav.navbar-nav
       li.active
-        a(href='./logged') Accueil
+        a(href='/admin') Accueil
       li
-        a(href='./produits') Produits
+        a(href='/admin/produits') Produits
       li
-        a(href='./ateliers') Ateliers
-
-
+        a(href='/admin/ateliers') Ateliers
 
 h2 Placer ici votre texte et votre image pour modifer l'évènement
+ul.pager.col-lg-12
+  li.previous
+    a(href='/admin/ateliers')
+      span.glyphicon.glyphicon-backward
+      |  Retour ateliers
+br
+a(href="/logout" class="btn btn-danger") Déconnexion 
+br
+br
 form(method="POST")
     br
     br
