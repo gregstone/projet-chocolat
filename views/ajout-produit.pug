@@ -25,6 +25,14 @@ form(method="post" enctype="multipart/form-data")
     input(name="image" type="file")
     br
     br
+    select(name="position" type="text")
+      option Categorie
+      option(value)
+      option(value='gauche') gauche
+      option(value='centre') centre
+      option(value='droite') droite
+    br
+    br   
     button Enregistrer
 
 script(src="https://cloud.tinymce.com/stable/tinymce.min.js")

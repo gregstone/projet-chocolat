@@ -1,0 +1,18 @@
+  each valeur in informations
+    .col-sm-4
+      a(href='#')
+        .suggestion-wrapper.suggestion
+          .row
+            .col-sm-12.colNoPadding
+              img.img-responsive(src='/images/_section-produits/produit1.jpg', alt='')
+          .row
+            .text-center.col-sm-12
+              h3=valeur.name
+          .row
+            .text-center.col-sm-12.suggestionNbPieces
+              h4=valeur.quantity
+          .row
+            .text-center.col-sm-6
+              h5=valeur.composition
+            .text-center.col-sm-6.suggestionPoids
+              h5=valeur.weight

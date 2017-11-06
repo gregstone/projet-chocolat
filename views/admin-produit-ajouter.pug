@@ -29,6 +29,11 @@ form(method="POST" enctype="multipart/form-data")
       option(value='chocolat blanc') Chocolat blanc
       option(value='chocolat lait') Chocolat lait
       option(value='chocolat mix') Chocolat mix
+    select(name="position" type="text")
+      option Categorie
+      option(value='gauche') gauche
+      option(value='centre') centre
+      option(value='droite') droite
     .form-group
     label(for='name') Nom du produit
     input#title.form-control(type='text' placeholder='Nom du produit' name="name")

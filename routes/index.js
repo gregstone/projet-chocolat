@@ -14,10 +14,10 @@ var path = require('path');
 
 /* GET index*/
 
-router.get('/', function(req, res, next) {
+// router.get('/', function(req, res, next) {
   
-  res.render('index');
-});
+//   res.render('index');
+// });
 
 /* GET juridique*/
 
@@ -162,6 +162,18 @@ router.get('/produits/chocolat-mix', function(req, res){
 });
 
 
+// page suggestion gauche home-page
+router.get('/', function(req, res){
+	// liste des produits choco noir 
+	connection.query('SELECT * FROM products;', function (error, results, fields) {
+	  	if (error) throw error;
+	  	// connected!
+	  	console.log(results);
+	  	res.render('index', {
+	  		informations: results
+	  	});
+	});
+});
 
 
 module.exports = router;

@@ -1,5 +1,6 @@
 extends layout 
 
+
 block content
   // Section ACCUEIL
   section
@@ -31,71 +32,66 @@ block content
             .col-md-8.col-md-offset-2.col-xs-12
               .row.ecartementTextEtImage
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                .col-sm-4
-                  // Suggestion 1
-                  a(href='#')
-                    .suggestion-wrapper.suggestion
-                      .row
-                        .col-sm-12.colNoPadding
-                          img.img-responsive(src='/images/_section-produits/produit1.jpg', alt='')
-                      .row
-                        .text-center.col-sm-12
-                          h3
-                            | Coffret
-                            br
-                            | ganaches
-                      .row
-                        .text-center.col-sm-12.suggestionNbPieces
-                          h4 15 pieces
-                      .row
-                        .text-center.col-sm-6
-                          h5 15%
-                        .text-center.col-sm-6.suggestionPoids
-                          h5 200g
+                
+                each valeur in informations
+                  if valeur.position=="gauche"
+                    .col-sm-4
+                      a(href='#')
+                        .suggestion-wrapper.suggestion
+                          .row
+                            .col-sm-12.colNoPadding
+                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                          .row
+                            .text-center.col-sm-12
+                              h3=valeur.name
+                          .row
+                            .text-center.col-sm-12.suggestionNbPieces
+                              h4=valeur.quantity
+                          .row
+                            .text-center.col-sm-6
+                              h5=valeur.composition
+                            .text-center.col-sm-6.suggestionPoids
+                              h5=valeur.weight
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                .col-sm-4
-                  // Suggestion 1
-                  a(href='#')
-                    .suggestion-wrapper.suggestion
-                      .row
-                        .col-sm-12.colNoPadding
-                          img(src='/images/_section-produits/produit2.jpg', alt='')
-                      .row
-                        .text-center.col-sm-12
-                          h3
-                            | Coffret
-                            br
-                            | ganaches
-                      .row
-                        .text-center.col-sm-12.suggestionNbPieces
-                          h4 15 pieces
-                      .row
-                        .text-center.col-sm-6
-                          h5 15%
-                        .text-center.col-sm-6.suggestionPoids
-                          h5 200g
+                each valeur in informations
+                  if valeur.position=="centre"
+                    .col-sm-4
+                      a(href='#')
+                        .suggestion-wrapper.suggestion
+                          .row
+                            .col-sm-12.colNoPadding
+                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                          .row
+                            .text-center.col-sm-12
+                              h3=valeur.name
+                          .row
+                            .text-center.col-sm-12.suggestionNbPieces
+                              h4=valeur.quantity
+                          .row
+                            .text-center.col-sm-6
+                              h5=valeur.composition
+                            .text-center.col-sm-6.suggestionPoids
+                              h5=valeur.weight
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                .col-sm-4
-                  // Suggestion 1
-                  a(href='#')
-                    .suggestion-wrapper.suggestion
-                      .row
-                        .col-sm-12.colNoPadding
-                          img(src='/images/_section-produits/produit3.jpg', alt='')
-                      .row
-                        .text-center.col-sm-12
-                          h3
-                            | Coffret
-                            br
-                            | ganaches
-                      .row
-                        .text-center.col-sm-12.suggestionNbPieces
-                          h4 15 pieces
-                      .row
-                        .text-center.col-sm-6
-                          h5 15%
-                        .text-center.col-sm-6.suggestionPoids
-                          h5 200g
+                each valeur in informations
+                  if valeur.position=="droite"
+                    .col-sm-4
+                      a(href='#')
+                        .suggestion-wrapper.suggestion
+                          .row
+                            .col-sm-12.colNoPadding
+                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                          .row
+                            .text-center.col-sm-12
+                              h3=valeur.name
+                          .row
+                            .text-center.col-sm-12.suggestionNbPieces
+                              h4=valeur.quantity
+                          .row
+                            .text-center.col-sm-6
+                              h5=valeur.composition
+                            .text-center.col-sm-6.suggestionPoids
+                              h5=valeur.weight
               // row
             // Container-fluid 2
         // wrapper
