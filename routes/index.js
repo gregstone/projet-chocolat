@@ -99,6 +99,69 @@ router.post('/contact', function(req, res, next) {
 
 });
 
+//
+router.get('/produits', function(req, res, next) {
+	connection.query('SELECT * FROM products', function (error, results, fields) {
+		if (error) throw error;
+		// connected!
+		console.log(results);
+		res.render('produit', {
+	  		informations: results
+	  	});
+	});
+
+
+ });
+
+// page liste des produit chocolat noir
+router.get('/produits/chocolat-noir', function(req, res){
+	// liste des produits choco noir 
+	connection.query('SELECT * FROM products where category="chocolat noir"', function (error, results, fields) {
+	  	if (error) throw error;
+	  	// connected!
+	  	res.render('chocolat-noir', {
+	  		informations: results
+	  	});
+	});
+});
+
+// page liste des produit chocolat blanc
+router.get('/produits/chocolat-blanc', function(req, res){
+	// liste des produits choco noir 
+	connection.query('SELECT * FROM products where category="chocolat blanc"', function (error, results, fields) {
+	  	if (error) throw error;
+	  	// connected!
+	  	res.render('chocolat-blanc', {
+	  		informations: results
+	  	});
+	});
+});
+
+// page liste des produit chocolat lait
+router.get('/produits/chocolat-lait', function(req, res){
+	// liste des produits choco noir 
+	connection.query('SELECT * FROM products where category="chocolat lait"', function (error, results, fields) {
+	  	if (error) throw error;
+	  	// connected!
+	  	res.render('chocolat-lait', {
+	  		informations: results
+	  	});
+	});
+});
+
+// page liste des produit chocolat mix
+router.get('/produits/chocolat-mix', function(req, res){
+	// liste des produits choco noir 
+	connection.query('SELECT * FROM products WHERE category="chocolat mix"', function (error, results, fields) {
+	  	if (error) throw error;
+	  	// connected!
+	  	res.render('chocolat-mix', {
+	  		informations: results
+	  	});
+	});
+});
+
+
 
 
 module.exports = router;

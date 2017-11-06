@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+
+    section
+      .container-fluid
+        .row
+          .col-xs-12.text-center.bgPageProduits
+            div
+              // <div class="items-home"> <img class="logohome" src="/images/logo-white.svg" alt=""></div>
+              h2.titrePageProduit.center-block Nos chocolats mix
+              h3.items-home.sousTitreSection
+              
+      each valeur in informations    
+       .container-fluid 
+        .containerSuggestions
+          .col-md-8.col-md-offset-2.col-xs-12
+            .row.ecartementTextEtImage
+              .col-sm-12
+                // Suggestion 1
+                a(href='#')
+                  .suggestion
+                    .row
+                      .col-sm-12.colNoPadding
+                        img.img-responsive(src="/images/" + valeur.image, alt='')
+                    .row
+                      .text-center.col-sm-12
+                        h3=valeur.name
+                    .row
+                      .col-sm-12.suggestionNbPieces
+                        h4=valeur.description
+                        br
+                        h6.ingredients-fp="Ingrédients = " + valeur.composition
+
+                    .row
+                      .text-center.col-sm-6
+                        h5=valeur.weight
+                      .text-center.col-sm-6.suggestionPoids
+                        h5=valeur.quantity
