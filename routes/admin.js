@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
 });
 
 
-// POST /admin/login
+// POST /admin login
 router.post('/', function(req, res) {
     // page de login 
     // puis
