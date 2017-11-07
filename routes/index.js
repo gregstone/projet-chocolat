@@ -16,7 +16,7 @@ var path = require('path');
 
 router.get('/', function(req, res, next) {
   
-  res.render('index');
+  res.render('index',{index:true});
 });
 
 /* GET juridique*/
@@ -55,7 +55,6 @@ router.post('/login', function(req, res) {
             res.send("Cet utilisateur n'existe pas");
         } else {
             req.session.connected = true;
-            req.session.cookie.maxAge = 36000; // 1 heure
             res.redirect('/logged');
         }
     });

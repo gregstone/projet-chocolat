@@ -7,7 +7,7 @@ body {
 
 h1 {
     font-size: 16px;
-    display: inline-flex;
+   /* display: inline-flex; */
 }
 
 
@@ -102,8 +102,8 @@ header a {
 }
 
 header a:hover{
-    color: grey;
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
 }
 
 
@@ -376,12 +376,30 @@ display : none ;
 
 }
 
+.paquet2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+
+
+}
+
+
+
 .item-label {
     height: 300px;
-    
+    width: 300px;
+    padding: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
     color: white;
     font-size: 26px;
-    justify-content: cneter;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    text-align: center;
+    align-items: flex-end;
 
 }
 
@@ -394,15 +412,13 @@ display : none ;
 }
 
 .item-label p {
-    text-align: center;
+    
     font-size: 22px;
 }
 
-.item-label h1 {
-
-    align-self: center;
-
-
+.item-label>h1 {
+    display: flex;
+    text-align: center;
 }
 
 
@@ -732,13 +748,14 @@ display : none ;
 
 
 .titrePageProduit{
-    font-size: 7em;
+    font-size: 5em;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     border-bottom: 10px white double;
     font-weight: bolder;
     display: inline;
-    margin-bottom: 70px; 
+    margin-bottom: 70px;
+    margin-top: -60px; 
 }
 
 .titreSection{
