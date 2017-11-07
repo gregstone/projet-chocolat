@@ -14,10 +14,12 @@ var path = require('path');
 
 /* GET index*/
 
-router.get('/', function(req, res, next) {
+// router.get('/', function(req, res, next) {
   
-  res.render('index',{index:true});
-});
+
+//   res.render('index');
+// });
+
 
 /* GET juridique*/
 
@@ -178,6 +180,17 @@ router.get('/produits/chocolat-mix', function(req, res){
 	  	if (error) throw error;
 	  	// connected!
 	  	res.render('chocolat-mix', {
+	  		informations: results
+	  	});
+	});
+});
+
+// section suggestions home-page
+router.get('/', function(req, res){ 
+	connection.query('SELECT * FROM products;', function (error, results, fields) {
+	  	if (error) throw error;
+	 
+	  	res.render('index', {
 	  		informations: results
 	  	});
 	});
