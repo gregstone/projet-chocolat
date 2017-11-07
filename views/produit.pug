@@ -1,7 +1,7 @@
 extends layout
 include mixins
 block content
-    section
+    section.nosproduits
       .container-fluid
         .row
           .col-xs-12.text-center.bgPageProduits
@@ -16,11 +16,11 @@ block content
                 br
                 |  Oscar Wilde
               a(href='./produits/chocolat-noir')
-                button(class="btn btn-secondary btn-lg")  Chocolat noir
+                button(class="btn btn-info btn-lg")  Chocolat noir
               a(href='./produits/chocolat-blanc')
-                button(class="btn btn-success btn-lg")  Chocolat blanc
+                button(class="btn btn-info btn-lg")  Chocolat blanc
               a(href='./produits/chocolat-lait')
-                button(class="btn btn-danger btn-lg")  Chocolat lait
+                button(class="btn btn-info btn-lg")  Chocolat lait
               a(href='./produits/chocolat-mix')
                 button(class="btn btn-info btn-lg") Chocolat mix
 
