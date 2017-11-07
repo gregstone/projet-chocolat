@@ -126,10 +126,16 @@ html
                 a(href='https://www.pinterest.fr/eplougoulm/-chocolat-en-joie-nos-recettes/') Nos recettes
           .col-sm-2
             ul
-              li
-                a(href='/#goto-atelier') Nos ateliers
-              li
-                a(href='/index#goto-noustrouver') Nous trouver
+              if index
+                li
+                  a.sliding-link(href='#goto-atelier') Nos ateliers
+                li
+                  a.sliding-link(href='#goto-noustrouver') Nous trouver
+              else
+                li
+                  a(href='/#goto-atelier') Nos ateliers
+                li
+                  a(href='/#goto-noustrouver') Nous trouver
               li
                 a(href='/contact') Nous contacter
           .col-sm-2
