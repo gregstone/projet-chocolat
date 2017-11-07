@@ -121,14 +121,15 @@ router.get('/produits/supprimer/:id(\\d+)', function(req, res, next) {
 // GET /admin/ateliers   // OK !!!!! Manque l'affichage de l'image dans la base ///
 router.get('/ateliers', function(req, res) {
     connection.query('SELECT * FROM workshops', function(error, results, fields) {
+        console.log(results);
         if (error) throw error;
         // connected!
         //res.render('admin-ateliers', results);
 
         res.render('admin-ateliers.pug', {
-            results: results
+            products: results
         });
-        console.log(results);
+        
         // liste des ateliers
     });
 });
