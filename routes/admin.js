@@ -78,8 +78,8 @@ router.post('/produits/ajouter', upload.single('image'), function(req, res, next
     } else {
         res.send('Vous avez fait une erreur dans le téléchargement')
     }
-    connection.query('INSERT INTO products VALUES (null, ?, ?, ?, ?, ?, ?, ?)',
-    [req.body.category,req.body.name, req.body.description, req.body.composition, req.body.quantity, req.body.weight, req.file.originalname],
+    connection.query('INSERT INTO products VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?)',
+    [req.body.category,req.body.name, req.body.description, req.body.composition, req.body.quantity, req.body.weight, req.file.originalname, req.body.position],
     function (error, results, fields) {
         if (error) throw error;
         // connected!
