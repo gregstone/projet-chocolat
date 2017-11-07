@@ -47,22 +47,39 @@ router.get('/produits/modifier/:id(\\d+)', function(req, res, next) {
 // POST /admin/produits/modifier
 router.post('/produits/modifier/:id(\\d+)', upload.single('image'), function(req, res, next) {
     console.log(req.body);
-    if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg') ) {
+   
+    if (req.file){ 
+        if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg') ) {
         fs.rename(req.file.path,'public/images/'+req.file.originalname);
-    } else {
-        res.send('Vous avez fait une erreur dans le téléchargement')
-    }
-    // Modification de l'article
-    connection.query('UPDATE products SET category=?,name=?,description=?,composition=?,quantity=?,weight=?, image=? WHERE id = ?',
+            } else {
+             res.send('Vous avez fait une erreur dans le téléchargement')
+         }
+            connection.query('UPDATE products SET category=?,name=?,description=?,composition=?,quantity=?,weight=?, image=? WHERE id = ?',
         [req.body.category,req.body.name,req.body.description,req.body.composition,req.body.quantity,req.body.weight, req.file.originalname, req.params.id],
         function (error, results, fields) {
-        if (error) {
-            console.log(error);
-        } else {
-            // Redirection vers /admin/produits
-            res.redirect('/admin/produits');
-        }
-    });
+            if (error) {
+                console.log(error);
+            } else {
+                // Redirection vers /admin/produits
+                res.redirect('/admin/produits');
+            }
+        });
+
+
+
+    } else { 
+        // Modification de l'article
+        connection.query('UPDATE products SET category=?,name=?,description=?,composition=?,quantity=?,weight=? WHERE id = ?',
+            [req.body.category,req.body.name,req.body.description,req.body.composition,req.body.quantity,req.body.weight,req.params.id],
+            function (error, results, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                // Redirection vers /admin/produits
+                res.redirect('/admin/produits');
+            }
+        });
+    }
 });
 
 // GET /admin/produits/ajouter
@@ -134,8 +151,9 @@ router.post('/ateliers/modifier', function(req, res) {
     //} else {
     //res.send('Vous avez fait une erreur dans le téléchargement') }
 	console.log(req.body);
-    connection.query('UPDATE workshops SET name = ?, date = ? WHERE id=1', [req.body.name, req.body.date], function (error, results, fields) {
-        if (error) throw error;
+    const dateArray=req.body.date.split('/');
+    connection.query('UPDATE workshops SET name = ?, date = ? WHERE id=1', [req.body.name,`${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`], function (error, results, fields) {
+        if (error) console.log( error);
         console.log(results);
         // connected!
         res.redirect('/admin/ateliers');
