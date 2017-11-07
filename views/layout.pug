@@ -35,6 +35,8 @@ html
   body
     header
       // BARRE DE NAVIGATION
+    
+    
       nav#navbar.navbar.navbar-toggleable-md.navbar-light.bg-faded.col-xs-12
         #navbarNav.collapse.navbar-collapse
           ul.navbar-nav.text-center
@@ -54,13 +56,20 @@ html
               a(href='')
             li.nav-item
               a.nav-link(href='') ◆
-            li.nav-item
-              
-              a.nav-link.sliding-link(href='/#goto-atelier') Nos ateliers
-            li.nav-item
-              a.nav-link(href='') ◆
-            li.nav-item
-              a.nav-link.sliding-link(href='/#goto-noustrouver') Nous trouver
+            if index
+              li.nav-item
+                a.nav-link.sliding-link(href='#goto-atelier') Nos ateliers
+              li.nav-item
+                a.nav-link(href='') ◆
+              li.nav-item
+                a.nav-link.sliding-link(href='#goto-noustrouver') Nous trouver
+            else
+              li.nav-item
+                a.nav-link(href='/#goto-atelier') Nos ateliers
+              li.nav-item
+                a.nav-link(href='') ◆
+              li.nav-item
+                a.nav-link(href='/#goto-noustrouver') Nous trouver
             li.nav-item
               a.nav-link(href='') ◆
             li.nav-item

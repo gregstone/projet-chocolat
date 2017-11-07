@@ -14,10 +14,12 @@ var path = require('path');
 
 /* GET index*/
 
-router.get('/', function(req, res, next) {
+// router.get('/', function(req, res, next) {
   
-  res.render('index');
-});
+
+//   res.render('index');
+// });
+
 
 /* GET juridique*/
 
@@ -55,7 +57,6 @@ router.post('/login', function(req, res) {
             res.send("Cet utilisateur n'existe pas");
         } else {
             req.session.connected = true;
-            req.session.cookie.maxAge = 36000; // 1 heure
             res.redirect('/logged');
         }
     });
@@ -179,6 +180,17 @@ router.get('/produits/chocolat-mix', function(req, res){
 	  	if (error) throw error;
 	  	// connected!
 	  	res.render('chocolat-mix', {
+	  		informations: results
+	  	});
+	});
+});
+
+// section suggestions home-page
+router.get('/', function(req, res){ 
+	connection.query('SELECT * FROM products;', function (error, results, fields) {
+	  	if (error) throw error;
+	 
+	  	res.render('index', {
 	  		informations: results
 	  	});
 	});

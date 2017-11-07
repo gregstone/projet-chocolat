@@ -44,7 +44,7 @@ app.use('/admin', function (req, res, next) {
     if (req.session.connected) {
       return next();
     } else {
-      return res.redirect ('/')
+      return res.redirect ('/login')
     }
 });
 app.use('/admin', admin);
