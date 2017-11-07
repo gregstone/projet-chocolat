@@ -126,7 +126,7 @@ router.get('/ateliers', function(req, res) {
         //res.render('admin-ateliers', results);
 
         res.render('admin-ateliers.pug', {
-            results: results
+            products: results
         });
         console.log(results);
         // liste des ateliers

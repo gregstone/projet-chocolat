@@ -28,18 +28,18 @@ table(border="1" width="100%")
         th date
         th image
         th action
-    each res in results
+    each product in products
         tr
-            td=res.id
-            td=res.name
-            td=res.date 
+            td=product.id
+            td=product.name
+            td=product.date 
             td
-                img(src="/images/" + res.image height="50")
+                img(src="/images/" + product.image height="50")
             td 
-            //  a(href="/admin/delete-product?id=" + res.id) Supprimer
+            //  a(href="/admin/delete-product?id=" + product.id) Supprimer
 
-br 
-br 
+            br 
+            br 
 
 table(border="1" width="100%")
     tr
@@ -48,8 +48,8 @@ table(border="1" width="100%")
         th image
         th action
 
-    each res in results
         tr
+    each product in products
             td 1
             td Image de fond section Ateliers
             td
@@ -65,4 +65,3 @@ table(border="1" width="100%")
                     br
                 br
                 a(href="/admin/default-background3") Image par défaut
-
