@@ -95,6 +95,11 @@ nav.scroll a {
     color: black;
 }
 
+nav.scroll a:hover {
+    color: #0077e2;
+}
+
+
 
 header a {
     color: white;
