@@ -31,65 +31,65 @@ block content
             .col-md-8.col-md-offset-2.col-xs-12
               .row.ecartementTextEtImage
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                each valeur in informations
-                  if valeur.position=="gauche"
+                each product in products
+                  if product.position=="gauche"
                     .col-sm-4
                       a(href='#')
                         .suggestion-wrapper.suggestion
                           .row
                             .col-sm-12.colNoPadding
-                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                              img.img-responsive(src="/images/" + product.image, alt='')
                           .row
                             .text-center.col-sm-12
-                              h3=valeur.name
+                              h3=product.name
                           .row
                             .text-center.col-sm-12.suggestionNbPieces
-                              h4=valeur.quantity
+                              h4=product.quantity
                           .row
                             .text-center.col-sm-6
-                              h5=valeur.composition
+                              h5=product.composition
                             .text-center.col-sm-6.suggestionPoids
-                              h5=valeur.weight
+                              h5=product.weight
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                each valeur in informations
-                  if valeur.position=="centre"
+                each product in products
+                  if product.position=="centre"
                     .col-sm-4
                       a(href='#')
                         .suggestion-wrapper.suggestion
                           .row
                             .col-sm-12.colNoPadding
-                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                              img.img-responsive(src="/images/" + product.image, alt='')
                           .row
                             .text-center.col-sm-12
-                              h3=valeur.name
+                              h3=product.name
                           .row
                             .text-center.col-sm-12.suggestionNbPieces
-                              h4=valeur.quantity
+                              h4=product.quantity
                           .row
                             .text-center.col-sm-6
-                              h5=valeur.composition
+                              h5=product.composition
                             .text-center.col-sm-6.suggestionPoids
-                              h5=valeur.weight
+                              h5=product.weight
                 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                each valeur in informations
-                  if valeur.position=="droite"
+                each product in products
+                  if product.position=="droite"
                     .col-sm-4
                       a(href='#')
                         .suggestion-wrapper.suggestion
                           .row
                             .col-sm-12.colNoPadding
-                              img.img-responsive(src="/images/" + valeur.image, alt='')
+                              img.img-responsive(src="/images/" + product.image, alt='')
                           .row
                             .text-center.col-sm-12
-                              h3=valeur.name
+                              h3=product.name
                           .row
                             .text-center.col-sm-12.suggestionNbPieces
-                              h4=valeur.quantity
+                              h4=product.quantity
                           .row
                             .text-center.col-sm-6
-                              h5=valeur.composition
+                              h5=product.composition
                             .text-center.col-sm-6.suggestionPoids
-                              h5=valeur.weight
+                              h5=product.weight
               // row
             // Container-fluid 2
         // wrapper
@@ -164,22 +164,19 @@ block content
     </div>
     </div>
     </section>
-  section#ateliers
-    #goto-atelier.container-fluid
-      .row.center-block
-        .col-lg-12.text-center.bgateliers
-          h3.items-ateliers.center-block
-            | LES
-            br
-            | ATELIERS
-          .items-wrap-ateliers.center-block
-            p MERCREDI 19 OCTOBRE
-            h2.items-ateliers
-              | MOUSSE
+  section#ateliers           
+      #goto-atelier.container-fluid
+        .row.center-block
+          .col-lg-12.text-center.bgateliers
+            h3.items-ateliers.center-block
+              | LES
               br
-              | AU CHOCOLAT
-            a(href='/contact')
-              button.btn.btn-default(type='button') Je m'inscris
+              | ATELIERS
+            .items-wrap-ateliers.center-block
+              p=event.date
+              h2.items-ateliers=event.name
+              a(href='/contact')
+                button.btn.btn-default(type='button') Je m'inscris
   // Section NOUS TROUVER
   section#localisation.container-fluid
     #goto-noustrouver
