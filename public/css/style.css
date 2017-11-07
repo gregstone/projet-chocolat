@@ -46,15 +46,16 @@ nav.scroll .social {
 
 .logo-navbar {
     background-image: url(/images/_navbar/logo-white.svg);
+    background-image: no-repeat;
     width: 129px;
-    height: 30px;
+    height: 35px;
 }
 
 
 nav.scroll .logo-navbar {
     background-image: url(/images/_navbar/logo-black.svg);
     width: 129px;
-    height: 30px;
+    height: 35px;
 }
 
 nav ul {
@@ -111,7 +112,6 @@ header a:hover{
 
 .social {
     position: relative;
-    color: red;
     display: none;
     width: 100%;
     height: 20px;
@@ -122,7 +122,7 @@ nav.scroll .social {
 }
 
 .item-social {
-    display: flex;
+    display: flex !important;
     justify-content: center;
 }
 
@@ -169,7 +169,7 @@ display : none ;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 800px;
-   display: -webkit-flex;
+    display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -209,7 +209,8 @@ display : none ;
 }
 
 .logohome{
-    height: 200px;
+    height: 170px;
+    margin: 0px;
     
 }
 
@@ -607,11 +608,11 @@ display : none ;
 }
 
 #myFooter .instagram:hover {
-    color: #7F3900;
+    color: #0077e2;
 }
 
 #myFooter .pinterest:hover {
-    color: #ef1a1a;
+    color: #0077e2;
 }
 
 #myFooter .btn {
