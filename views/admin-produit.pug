@@ -35,6 +35,7 @@ table.table.table-striped.table-bordered
         th Composition
         th Quantité
         th Poids
+        th Position
         th Photo
         th
         th
@@ -46,7 +47,8 @@ table.table.table-striped.table-bordered
             td=product.description
             td=product.composition
             td=product.quantity
-            td=product.weight 
+            td=product.weight
+            td=product.position
             td
                 img(src="/images/" + product.image height="50")
             td

@@ -33,6 +33,21 @@ html
     // Google console?
     // URL canonique?
     title Chocolat en joie
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" )
+    script(src='///cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js')    
+    script.
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
+          },
+          "position": "bottom-right"
+        }
+      })});
   body
     header
       // BARRE DE NAVIGATION
@@ -156,7 +171,7 @@ html
             a(href='/contact')
               button.btn.btn-default(type='button') Contactez nous
       .footer-copyright
-        p Made with love by the Cocoa team... and Fabwild, Cris tof, Alexis, Camillllle, Carla, Polo and all the Lutèce crew! 
+        p Made with love by the Cocoa team... and Fabwild, Cris tof, Alexis, Camillllle, Carla, Polo and all the Paris crew! 
         p © 2017 Chocolat en Joie
     // /.Footer
     // Google analytic
@@ -179,12 +194,6 @@ html
     // Global Javascript file
     script(src='/javascripts/script.js')
     // Utilisation des cookies
-    script(src='/javascripts/cookiechoices.js')
     script(src='https://www.google.com/recaptcha/api.js')
-    script.
-      document.addEventListener ('DOMContentLoaded', function(event) {
-      cookieChoices.showCookieConsentBar ('En poursuivant votre navigation sur notre site, vous acceptez le dépôt de cookies qui nous permettront de vous proposer des contenus adaptés, d\\\’analyser le trafic et d\’effectuer des statistiques.', 'J\’accepte', 'En savoir plus', 'https://www.cnil.fr/fr');
-      });
-    // Gestion des ancres
     script(src='/javascripts/ancres.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')

@@ -1,4 +1,3 @@
-
 /*
  Copyright 2014 Google Inc. All rights reserved.
 
@@ -32,10 +31,8 @@
     var dismissLinkId = 'cookieChoiceDismiss';
 
     function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-
-      var butterBarStyles = 'position:fixed;width:100vw;background-color:#F69229;color:#000;font-size:14px;' +
+      var butterBarStyles = 'position:fixed;width:100%;background-color:#FFA500;color:#000000;' +
           'margin:0; left:0; top:0; padding:4px;z-index:1000;text-align:center;';
-
 
       var cookieConsentElement = document.createElement('div');
       cookieConsentElement.id = cookieConsentId;
@@ -106,8 +103,7 @@
       dismissLink.id = dismissLinkId;
       dismissLink.href = '#';
       dismissLink.style.marginLeft = '15px';
-      dismissLink.style.fontWeight = 'bold';
-      dismissLink.style.color = '#000';
+      dismissLink.style.color = '#000000';
       return dismissLink;
     }
 
@@ -117,8 +113,7 @@
       infoLink.href = linkHref;
       infoLink.target = '_blank';
       infoLink.style.marginLeft = '15px';
-      infoLink.style.fontWeight = 'bold';
-      infoLink.style.color = '#000';
+      infoLink.style.color = '#000000';
       return infoLink;
     }
 
@@ -177,4 +172,3 @@
   window.cookieChoices = cookieChoices;
   return cookieChoices;
 })(this);
-
