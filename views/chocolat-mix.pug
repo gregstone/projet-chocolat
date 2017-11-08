@@ -28,10 +28,9 @@ block content
         .containerSuggestions
           .col-md-offset-3.col-md-6.col-xs-12
             .row.ecartementTextEtImage
-              .col-sm-12
-                // Suggestion 1
+              .col-sm-6.col-sm-offset-3
                 a(href='#')
-                  .suggestion
+                  .suggestion-wrapper.suggestion
                     .row
                       .col-sm-12.colNoPadding
                         img.img-responsive(src="/images/" + valeur.image, alt='')
@@ -39,13 +38,10 @@ block content
                       .text-center.col-sm-12
                         h3=valeur.name
                     .row
-                      .col-sm-12.suggestionNbPieces
-                        h4=valeur.description
-                        br
-                        h6.ingredients-fp="Ingrédients = " + valeur.composition
-
+                      .text-center.col-sm-12
+                        h5=valeur.composition
                     .row
-                      .text-center.col-sm-6
-                        h5=valeur.weight
+                      .text-center.col-sm-6.suggestionNbPieces
+                        h4=valeur.quantity
                       .text-center.col-sm-6.suggestionPoids
-                        h5=valeur.quantity
+                        h5=valeur.weight

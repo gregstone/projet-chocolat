@@ -28,10 +28,9 @@ block content
         .containerSuggestions
           .col-md-offset-3.col-md-6.col-xs-12
             .row.ecartementTextEtImage
-              .col-sm-12
-                // Suggestion 1
+              .col-sm-6.col-sm-offset-3
                 a(href='#')
-                  .suggestion
+                  .suggestion-wrapper.suggestion
                     .row
                       .col-sm-12.colNoPadding
                         img.img-responsive(src="/images/" + valeur.image, alt='')
@@ -46,3 +45,7 @@ block content
                         h4=valeur.quantity
                       .text-center.col-sm-6.suggestionPoids
                         h5=valeur.weight
+
+
+
+                        
