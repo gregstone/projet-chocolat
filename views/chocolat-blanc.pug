@@ -39,13 +39,10 @@ block content
                       .text-center.col-sm-12
                         h3=valeur.name
                     .row
-                      .col-sm-12.suggestionNbPieces
-                        h4=valeur.description
-                        br
-                        h6.ingredients-fp="Ingrédients = " + valeur.composition
-
+                      .text-center.col-sm-12
+                        h5=valeur.composition
                     .row
-                      .text-center.col-sm-6
-                        h5=valeur.weight
+                      .text-center.col-sm-6.suggestionNbPieces
+                        h4=valeur.quantity
                       .text-center.col-sm-6.suggestionPoids
-                        h5=valeur.quantity
+                        h5=valeur.weight

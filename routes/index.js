@@ -20,6 +20,26 @@ var path = require('path');
 //   res.render('index');
 // });
 
+// section suggestions home-page
+router.get('/', function(req, res){ 
+	connection.query('SELECT * FROM workshops LIMIT 1;', function (error, results, fields) {
+		if (error) throw error;
+		connection.query('SELECT * FROM products;', function(error, results2, fields){
+			if (error) throw error;
+			res.render('index', {
+	  			products: results2,
+	  			event: results[0],
+	  			index:true
+			});
+		});
+  	
+		
+	});
+	
+});
+
+
+
 
 /* GET juridique*/
 
@@ -185,22 +205,7 @@ router.get('/produits/chocolat-mix', function(req, res){
 	});
 });
 
-// section suggestions home-page
-router.get('/', function(req, res){ 
-	connection.query('SELECT * FROM workshops LIMIT 1;', function (error, results, fields) {
-		if (error) throw error;
-		connection.query('SELECT * FROM products;', function(error, results2, fields){
-			if (error) throw error;
-			res.render('index', {
-	  			products: results2,
-	  			event: results[0]
-			});
-		});
-  	
-		
-	});
-	
-});
+
 
 
 

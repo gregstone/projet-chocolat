@@ -349,12 +349,13 @@ display : none ;
 
 .suggestionNbPieces {
     border-top: black solid 1px;
-    border-bottom: black solid 1px;
+    
     margin: 0px;
 }
 
 .suggestionPoids {
     border-left: black solid 1px;
+    border-top: black solid 1px;
 }
 
 @media (max-width: 768px) {
@@ -827,6 +828,7 @@ display : none ;
 
 .sousTitreSection{
     margin-top: 20px;
+    font-weight: 700;
 }
 
 .marginTitreSection{
